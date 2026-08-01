@@ -1,0 +1,75 @@
+\documentclass[
+    12pt,
+    a4paper
+]{report}
+
+
+
+\usepackage{graphicx}
+\usepackage{geometry}
+
+\title{ELEC473 Assignment 4 - Synthesising the NIOS II Processor}
+\date{\today}
+\author{Ryan McKee - 201954749}
+
+
+% TODO When report complete
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    
+\end{abstract}
+
+
+\chapter{Introduction}
+
+We focus on expanding familiarity of FPGA \(Field Programmable Gateway\) engineering through 
+this assignments focus on \bold{QSYS}~\cite{qsys} and the \bold{NIOS-II}~\cite{nios_ii} processor. 
+The NIOS-II being \bold{Altera's}~\cite{altera} own 32-bit embedded processor 
+mirco-architecture specifically designed for syntehesis on FPGA, The NIOS-II is a successor 
+of Altera's first configurable 16-bit embedded processor Nios, introduced in 2000. During this assignment 
+we utilize the Cyclone-II DE2 FPGA which we syntehsis designs, bench test and design specifically for during the course
+of our work.
+
+
+The NIOS-II hosts the following design parameters: 
+-   32 general-purpose 32-bit registers
+-   Full 32-bit Instruction set, data path, and address space.
+- Singla-instruction 32 x 32 mulitply and divide producing a 32-bit result. 
+
+This soft-core \(A soft microprocessor is a microprocessor core that can be wholly implemented using logic syntehsis. It can be implemented 
+via different semiconductor devices containing Programmable logic (e.g. FPGA, CPLD) including bothhigh-end and commodity validations~\cite{soft-microprocessor}\) nature of NIOS-II enables hardware engineers to specify and generate 
+custom NIOS II core, tailed for their own cusom application requirements. 
+
+Qsys ( now known as platform designer) is a system integration tool for Intel Quartus Prime.
+It helps connect multiple intellectual property (IP) blocks, 
+processors (like Nios II), and memory interfaces using standard interconnects like Avalon and AXI.
+It can be utilized for generated HDL.
+
+This assignment sees us in Part A sythesise a NIOS II processor with 20KB of on-chip memory, a timer, a JTAG UART,
+8 parallel I/O pins and system ID component. part a sees us interface the 512 KB SRAM and 8 MB SDRAM on the Altera DE2 Board 
+to this design and test it using memory test programs within NIOS II IDE we will show Name and ID numbers
+in terminal each time the memory is testing. 
+
+part b continues on part a requiring us to develop a custom instruction to count the number of leading 1s in the 32 bit number passed into 
+the instruction. and write a custom program to the this custom instruction. I will also develop a test routine in C or assembler utilizing compiler that
+has the same instruction fucntionality implemented to compare the speed of the custom instruction against software implementation. 
+
+Part C we shall utilize PWM to control the inensite of of LEDR10. 
+
+
+\chapter{Part A - SRAM \& SDRAM}
+
+
+
+\chapter{Part B - Custom Instruction}
+
+\chapter{Part C - PWM Module}
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}
