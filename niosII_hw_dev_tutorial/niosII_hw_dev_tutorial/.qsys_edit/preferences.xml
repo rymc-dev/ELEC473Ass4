@@ -3,19 +3,21 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="111" />
+   <connections preferredWidth="127" />
    <irq preferredWidth="34" />
+   <export preferredWidth="312" />
   </columns>
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="444" />
-   <clocksource preferredWidth="442" />
-   <frequency preferredWidth="435" />
+   <clockname preferredWidth="542" />
+   <clocksource preferredWidth="541" />
+   <frequency preferredWidth="541" />
   </columns>
  </clocktable>
  <library
    expandedCategories="Library/University Program,Library/University Program/Memory,Project,Library" />
  <window width="1938" height="1158" x="-9" y="-9" />
  <hdlexample language="VERILOG" />
+ <generation path="_PROJECT_NAME_" />
 </preferences>

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
  * SOPC Builder design path: C:/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/first_nios2_system.sopcinfo
  *
- * Generated: Sun Aug 02 11:55:38 BST 2026
+ * Generated: Sun Aug 02 12:37:08 BST 2026
  */
 
 /*
@@ -50,14 +50,14 @@
 
 MEMORY
 {
-    sram : ORIGIN = 0x80000, LENGTH = 524288
-    reset : ORIGIN = 0x108000, LENGTH = 32
-    onchip_mem : ORIGIN = 0x108020, LENGTH = 20448
+    reset : ORIGIN = 0x0, LENGTH = 32
+    sram : ORIGIN = 0x20, LENGTH = 524256
+    onchip_mem : ORIGIN = 0x80000, LENGTH = 20480
 }
 
 /* Define symbols for each memory base-address */
-__alt_mem_sram = 0x80000;
-__alt_mem_onchip_mem = 0x108000;
+__alt_mem_sram = 0x0;
+__alt_mem_onchip_mem = 0x80000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -112,7 +112,7 @@ SECTIONS
         KEEP (*(.exceptions.exit));
         KEEP (*(.exceptions));
         PROVIDE (__ram_exceptions_end = ABSOLUTE(.));
-    } > onchip_mem
+    } > sram
 
     PROVIDE (__flash_exceptions_start = LOADADDR(.exceptions));
 
@@ -385,7 +385,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x10d000;
+__alt_data_end = 0x85000;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -401,4 +401,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x10d000 );
+PROVIDE( __alt_heap_limit    = 0x85000 );

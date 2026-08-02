@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
  * SOPC Builder design path: C:/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/first_nios2_system.sopcinfo
  *
- * Generated: Sun Aug 02 11:55:38 BST 2026
+ * Generated: Sun Aug 02 12:37:08 BST 2026
  */
 
 /*
@@ -65,12 +65,12 @@
  *
  */
 
-#define ONCHIP_MEM_REGION_BASE 0x108020
-#define ONCHIP_MEM_REGION_SPAN 20448
-#define RESET_REGION_BASE 0x108000
+#define ONCHIP_MEM_REGION_BASE 0x80000
+#define ONCHIP_MEM_REGION_SPAN 20480
+#define RESET_REGION_BASE 0x0
 #define RESET_REGION_SPAN 32
-#define SRAM_REGION_BASE 0x80000
-#define SRAM_REGION_SPAN 524288
+#define SRAM_REGION_BASE 0x20
+#define SRAM_REGION_SPAN 524256
 
 
 /*
@@ -78,8 +78,8 @@
  *
  */
 
-#define ALT_EXCEPTIONS_DEVICE ONCHIP_MEM
-#define ALT_RESET_DEVICE ONCHIP_MEM
+#define ALT_EXCEPTIONS_DEVICE SRAM
+#define ALT_RESET_DEVICE SRAM
 #define ALT_RODATA_DEVICE ONCHIP_MEM
 #define ALT_RWDATA_DEVICE ONCHIP_MEM
 #define ALT_TEXT_DEVICE ONCHIP_MEM

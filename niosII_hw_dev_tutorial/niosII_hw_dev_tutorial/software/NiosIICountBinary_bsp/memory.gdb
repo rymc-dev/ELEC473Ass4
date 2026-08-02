@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
 # SOPC Builder design path: C:/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/first_nios2_system.sopcinfo
 #
-# Generated: Sun Aug 02 11:55:38 BST 2026
+# Generated: Sun Aug 02 12:37:08 BST 2026
 
 # DO NOT MODIFY THIS FILE
 #
@@ -47,7 +47,7 @@
 # by allowing GDB to cache memory contents on the host.
 
 # sram
-memory 0x80000 0x100000 cache
+memory 0x0 0x80000 cache
 
 # onchip_mem
-memory 0x108000 0x10d000 cache
+memory 0x80000 0x85000 cache

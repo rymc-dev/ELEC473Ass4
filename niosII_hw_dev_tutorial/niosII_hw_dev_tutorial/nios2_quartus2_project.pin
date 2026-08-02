@@ -100,9 +100,9 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AA5       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA6       :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA7       :        :                   :         : 1         :                
 VCCA_PLL1                    : AA8       : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA9       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA10      :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA11      :        :                   :         : 8         :                
+SRAM_DQ[3]                   : AA9       : bidir  : 1.8 V             :         : 8         : Y              
+SRAM_DQ[4]                   : AA10      : bidir  : 1.8 V             :         : 8         : Y              
+SRAM_DQ[6]                   : AA11      : bidir  : 1.8 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA12      :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA14      :        :                   :         : 7         :                
@@ -125,9 +125,9 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AB4       :        :                   :      
 VCCIO1                       : AB5       : power  :                   : 1.8V    : 1         :                
 VCCIO8                       : AB6       : power  :                   : 1.8V    : 8         :                
 GND                          : AB7       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :         : 8         :                
+SRAM_ADDR[16]                : AB8       : output : 1.8 V             :         : 8         : Y              
 VCCIO8                       : AB9       : power  :                   : 1.8V    : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB10      :        :                   :         : 8         :                
+SRAM_DQ[5]                   : AB10      : bidir  : 1.8 V             :         : 8         : Y              
 GND                          : AB11      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB12      :        :                   :         : 8         :                
 VCCIO8                       : AB13      : power  :                   : 1.8V    : 8         :                
@@ -148,13 +148,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AC1       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC2       :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC3       :        :                   :         : 1         :                
 GND                          : AC4       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC5       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC6       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC7       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC8       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC9       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC10      :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AC11      :        :                   :         : 8         :                
+SRAM_ADDR[2]                 : AC5       : output : 1.8 V             :         : 8         : Y              
+SRAM_ADDR[3]                 : AC6       : output : 1.8 V             :         : 8         : Y              
+SRAM_ADDR[12]                : AC7       : output : 1.8 V             :         : 8         : Y              
+SRAM_ADDR[17]                : AC8       : output : 1.8 V             :         : 8         : Y              
+SRAM_DQ[14]                  : AC9       : bidir  : 1.8 V             :         : 8         : Y              
+SRAM_DQ[15]                  : AC10      : bidir  : 1.8 V             :         : 8         : Y              
+SRAM_CE_N                    : AC11      : output : 1.8 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC12      :        :                   :         : 8         :                
 GND+                         : AC13      :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC14      :        :                   :         : 7         :                
@@ -173,13 +173,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AC26      :        :                   :      
 VCCIO1                       : AD1       : power  :                   : 1.8V    : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD2       :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD3       :        :                   :         : 1         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD4       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD5       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD6       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD7       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD8       :        :                   :         : 8         :                
+SRAM_ADDR[4]                 : AD4       : output : 1.8 V             :         : 8         : Y              
+SRAM_ADDR[5]                 : AD5       : output : 1.8 V             :         : 8         : Y              
+SRAM_ADDR[8]                 : AD6       : output : 1.8 V             :         : 8         : Y              
+SRAM_ADDR[9]                 : AD7       : output : 1.8 V             :         : 8         : Y              
+SRAM_DQ[0]                   : AD8       : bidir  : 1.8 V             :         : 8         : Y              
 GND                          : AD9       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD10      :        :                   :         : 8         :                
+SRAM_OE_N                    : AD10      : output : 1.8 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD11      :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD12      :        :                   :         : 8         :                
 GND+                         : AD13      :        :                   :         : 8         :                
@@ -199,13 +199,13 @@ VCCIO6                       : AD26      : power  :                   : 1.8V    
 GND                          : AE1       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE2       :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE3       :        :                   :         : 1         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE4       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE5       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE6       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE7       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE8       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE9       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE10      :        :                   :         : 8         :                
+SRAM_ADDR[0]                 : AE4       : output : 1.8 V             :         : 8         : Y              
+SRAM_ADDR[6]                 : AE5       : output : 1.8 V             :         : 8         : Y              
+SRAM_DQ[1]                   : AE6       : bidir  : 1.8 V             :         : 8         : Y              
+SRAM_DQ[8]                   : AE7       : bidir  : 1.8 V             :         : 8         : Y              
+SRAM_DQ[10]                  : AE8       : bidir  : 1.8 V             :         : 8         : Y              
+SRAM_LB_N                    : AE9       : output : 1.8 V             :         : 8         : Y              
+SRAM_WE_N                    : AE10      : output : 1.8 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE11      :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE12      :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE13      :        :                   :         : 8         :                
@@ -224,12 +224,12 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AE25      :        :                   :      
 GND                          : AE26      : gnd    :                   :         :           :                
 GND                          : AF2       : gnd    :                   :         :           :                
 VCCIO8                       : AF3       : power  :                   : 1.8V    : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF4       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF5       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF6       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF7       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF8       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF9       :        :                   :         : 8         :                
+SRAM_ADDR[1]                 : AF4       : output : 1.8 V             :         : 8         : Y              
+SRAM_ADDR[7]                 : AF5       : output : 1.8 V             :         : 8         : Y              
+SRAM_DQ[2]                   : AF6       : bidir  : 1.8 V             :         : 8         : Y              
+SRAM_DQ[9]                   : AF7       : bidir  : 1.8 V             :         : 8         : Y              
+SRAM_DQ[11]                  : AF8       : bidir  : 1.8 V             :         : 8         : Y              
+SRAM_UB_N                    : AF9       : output : 1.8 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF10      :        :                   :         : 8         :                
 VCCIO8                       : AF11      : power  :                   : 1.8V    : 8         :                
 GND                          : AF12      : gnd    :                   :         :           :                
@@ -670,8 +670,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : V5        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : V6        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 1         :                
 VCCIO1                       : V8        : power  :                   : 1.8V    : 1         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V9        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V10       :        :                   :         : 8         :                
+SRAM_ADDR[11]                : V9        : output : 1.8 V             :         : 8         : Y              
+SRAM_ADDR[10]                : V10       : output : 1.8 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V11       :        :                   :         : 8         :                
 VCCIO8                       : V12       : power  :                   : 1.8V    : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V13       :        :                   :         : 8         :                
@@ -695,11 +695,11 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :      
 GND                          : W5        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W6        :        :                   :         : 1         :                
 GND_PLL1                     : W7        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W8        :        :                   :         : 8         :                
+SRAM_ADDR[13]                : W8        : output : 1.8 V             :         : 8         : Y              
 VCCIO8                       : W9        : power  :                   : 1.8V    : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W10       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W11       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W12       :        :                   :         : 8         :                
+SRAM_ADDR[14]                : W10       : output : 1.8 V             :         : 8         : Y              
+SRAM_DQ[12]                  : W11       : bidir  : 1.8 V             :         : 8         : Y              
+SRAM_DQ[13]                  : W12       : bidir  : 1.8 V             :         : 8         : Y              
 GND                          : W13       : gnd    :                   :         :           :                
 GND                          : W14       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W15       :        :                   :         : 7         :                
@@ -723,8 +723,8 @@ GND_PLL1                     : Y6        : gnd    :                   :         
 VCCD_PLL1                    : Y7        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : Y8        : gnd    :                   :         :           :                
 GND                          : Y9        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y10       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y11       :        :                   :         : 8         :                
+SRAM_ADDR[15]                : Y10       : output : 1.8 V             :         : 8         : Y              
+SRAM_DQ[7]                   : Y11       : bidir  : 1.8 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y12       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y14       :        :                   :         : 7         :                

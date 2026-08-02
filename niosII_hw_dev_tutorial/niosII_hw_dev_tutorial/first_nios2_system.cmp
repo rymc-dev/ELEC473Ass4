@@ -2,14 +2,14 @@
 		port (
 			clk_clk                 : in    std_logic                     := 'X';             -- clk
 			led_pio_external_export : out   std_logic_vector(7 downto 0);                     -- export
-			reset_reset_n           : in    std_logic                     := 'X';             -- reset_n
-			sram_interface_DQ       : inout std_logic_vector(15 downto 0) := (others => 'X'); -- DQ
-			sram_interface_ADDR     : out   std_logic_vector(17 downto 0);                    -- ADDR
-			sram_interface_LB_N     : out   std_logic;                                        -- LB_N
-			sram_interface_UB_N     : out   std_logic;                                        -- UB_N
-			sram_interface_CE_N     : out   std_logic;                                        -- CE_N
-			sram_interface_OE_N     : out   std_logic;                                        -- OE_N
-			sram_interface_WE_N     : out   std_logic                                         -- WE_N
+			sram_DQ                 : inout std_logic_vector(15 downto 0) := (others => 'X'); -- DQ
+			sram_ADDR               : out   std_logic_vector(17 downto 0);                    -- ADDR
+			sram_LB_N               : out   std_logic;                                        -- LB_N
+			sram_UB_N               : out   std_logic;                                        -- UB_N
+			sram_CE_N               : out   std_logic;                                        -- CE_N
+			sram_OE_N               : out   std_logic;                                        -- OE_N
+			sram_WE_N               : out   std_logic;                                        -- WE_N
+			reset_reset_n           : in    std_logic                     := 'X'              -- reset_n
 		);
 	end component first_nios2_system;
 
