@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>02-Aug-2026 16:02:10</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1785682930222</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Aug 3, 2026 2:18:56 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1785763136325</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\ryanm\OneDrive\Desktop\ELEC374Ass4\niosII_hw_dev_tutorial\niosII_hw_dev_tutorial\software\CountBinary_bsp</BspGeneratedLocation>
-        <BspSettingsFile>settings.bsp</BspSettingsFile>
+        <BspSettingsFile>C:\Users\ryanm\OneDrive\Desktop\ELEC374Ass4\niosII_hw_dev_tutorial\niosII_hw_dev_tutorial\software\CountBinary_bsp\settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\ryanm\OneDrive\Desktop\ELEC374Ass4\niosII_hw_dev_tutorial\niosII_hw_dev_tutorial\first_nios2_system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu</Cpu>

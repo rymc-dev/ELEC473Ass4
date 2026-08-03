@@ -98,7 +98,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AA3       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA4       :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA5       :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA6       :        :                   :         : 1         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA7       :        :                   :         : 1         :                
+DRAM_CLK                     : AA7       : output : 1.8 V             :         : 1         : Y              
 VCCA_PLL1                    : AA8       : power  :                   : 1.2V    :           :                
 SRAM_DQ[3]                   : AA9       : bidir  : 1.8 V             :         : 8         : Y              
 SRAM_DQ[4]                   : AA10      : bidir  : 1.8 V             :         : 8         : Y              

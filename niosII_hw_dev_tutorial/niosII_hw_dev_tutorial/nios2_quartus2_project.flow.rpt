@@ -1,5 +1,5 @@
 Flow report for nios2_quartus2_project
-Sun Aug 02 15:58:16 2026
+Mon Aug 03 14:17:20 2026
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Sun Aug 02 15:58:14 2026            ;
+; Flow Status                        ; Successful - Mon Aug 03 14:17:17 2026            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; nios2_quartus2_project                           ;
 ; Top-level Entity Name              ; nios2_quartus2_project                           ;
 ; Family                             ; Cyclone II                                       ;
 ; Device                             ; EP2C35F672C6                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 2,600 / 33,216 ( 8 % )                           ;
-;     Total combinational functions  ; 2,391 / 33,216 ( 7 % )                           ;
+; Total logic elements               ; 2,602 / 33,216 ( 8 % )                           ;
+;     Total combinational functions  ; 2,390 / 33,216 ( 7 % )                           ;
 ;     Dedicated logic registers      ; 1,593 / 33,216 ( 5 % )                           ;
 ; Total registers                    ; 1593                                             ;
-; Total pins                         ; 48 / 475 ( 10 % )                                ;
+; Total pins                         ; 49 / 475 ( 10 % )                                ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 192,576 / 483,840 ( 40 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                   ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                   ;
 +------------------------------------+--------------------------------------------------+
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 08/02/2026 15:57:54    ;
+; Start date & time ; 08/03/2026 14:16:54    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; nios2_quartus2_project ;
 +-------------------+------------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------------------+---------------+---------------------------------------+------------+
 ; Assignment Name                     ; Value                                                                ; Default Value ; Entity Name                           ; Section Id ;
 +-------------------------------------+----------------------------------------------------------------------+---------------+---------------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 24062491136.178568267430440                                          ; --            ; --                                    ; --         ;
+; COMPILER_SIGNATURE_ID               ; 24062491136.178576301319904                                          ; --            ; --                                    ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                                 ; --            ; altera_avalon_sc_fifo                 ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                                 ; --            ; altera_merlin_burst_adapter           ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                                 ; --            ; altera_merlin_master_agent            ; --         ;
@@ -172,7 +172,7 @@ applicable agreement for further details.
 ; PARTITION_NETLIST_TYPE              ; SOURCE                                                               ; --            ; --                                    ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                  ; --            ; --                                    ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                ; --            ; --                                    ; --         ;
-; SLD_INFO                            ; QSYS_NAME first_nios2_system HAS_SOPCINFO 1 GENERATION_ID 1785682627 ; --            ; first_nios2_system                    ; --         ;
+; SLD_INFO                            ; QSYS_NAME first_nios2_system HAS_SOPCINFO 1 GENERATION_ID 1785762494 ; --            ; first_nios2_system                    ; --         ;
 ; SMART_RECOMPILE                     ; On                                                                   ; Off           ; --                                    ; --         ;
 ; SOPCINFO_FILE                       ; first_nios2_system/synthesis/../../first_nios2_system.sopcinfo       ; --            ; --                                    ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                   ; --            ; --                                    ; --         ;
@@ -184,11 +184,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 4735 MB             ; 00:00:07                           ;
-; Fitter                    ; 00:00:07     ; 2.0                     ; 5768 MB             ; 00:00:13                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4633 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:18     ; --                      ; --                  ; 00:00:22                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 4747 MB             ; 00:00:08                           ;
+; Fitter                    ; 00:00:08     ; 3.2                     ; 5774 MB             ; 00:00:12                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4633 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:22                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

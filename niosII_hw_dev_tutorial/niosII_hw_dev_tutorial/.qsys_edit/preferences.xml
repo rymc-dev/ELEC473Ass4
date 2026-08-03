@@ -3,7 +3,7 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="127" />
+   <connections preferredWidth="143" />
    <irq preferredWidth="34" />
    <export preferredWidth="312" />
   </columns>
@@ -15,8 +15,7 @@
    <frequency preferredWidth="541" />
   </columns>
  </clocktable>
- <library
-   expandedCategories="Library/University Program,Library/University Program/Memory,Project,Library" />
+ <library expandedCategories="Library,Project,Library/University Program" />
  <window width="1938" height="1158" x="-9" y="-9" />
  <hdlexample language="VERILOG" />
  <generation path="_PROJECT_NAME_" />

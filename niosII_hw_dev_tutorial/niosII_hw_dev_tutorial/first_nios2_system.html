@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2026.08.02.15:57:07</td>
+    <td class="l">2026.08.03.14:08:14</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -76,10 +76,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   <div class="greydiv">
    <div style="display:inline-block ; text-align:left">
     <table class="connectionboxes">
-     <tr>
-      <td class="lefthandwire">&#160;&#160;clk_0&#160;</td>
-      <td class="main" rowspan="2">first_nios2_system</td>
-     </tr>
      <tr style="height:6px">
       <td></td>
      </tr>
@@ -219,53 +215,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="addr"><span style="color:#989898">0x</span>00000000</td>
    </tr>
   </table>
-  <a name="module_clk_0"> </a>
-  <div>
-   <hr/>
-   <h2>clk_0</h2>clock_source v13.0
-   <br/>
-   <br/>
-   <br/>
-   <table class="flowbox">
-    <tr>
-     <td class="parametersbox">
-      <h2>Parameters</h2>
-      <table>
-       <tr>
-        <td class="parametername">clockFrequency</td>
-        <td class="parametervalue">50000000</td>
-       </tr>
-       <tr>
-        <td class="parametername">clockFrequencyKnown</td>
-        <td class="parametervalue">true</td>
-       </tr>
-       <tr>
-        <td class="parametername">inputClockFrequency</td>
-        <td class="parametervalue">0</td>
-       </tr>
-       <tr>
-        <td class="parametername">resetSynchronousEdges</td>
-        <td class="parametervalue">NONE</td>
-       </tr>
-       <tr>
-        <td class="parametername">deviceFamily</td>
-        <td class="parametervalue">UNKNOWN</td>
-       </tr>
-       <tr>
-        <td class="parametername">generateLegacySim</td>
-        <td class="parametervalue">false</td>
-       </tr>
-      </table>
-     </td>
-    </tr>
-   </table>&#160;&#160;
-   <table class="flowbox">
-    <tr>
-     <td class="parametersbox">
-      <h2>Software Assignments</h2>(none)</td>
-    </tr>
-   </table>
-  </div>
   <a name="module_onchip_mem"> </a>
   <div>
    <hr/>
@@ -274,32 +223,32 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="4">
-       <a href="#module_clk_0">clk_0</a>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_cpu">cpu</a>
       </td>
-      <td class="from">clk&#160;&#160;</td>
+      <td class="from">data_master&#160;&#160;</td>
       <td class="main" rowspan="7">onchip_mem</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;clk1</td>
-     </tr>
-     <tr>
-      <td class="from">clk_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset1</td>
+      <td class="to">&#160;&#160;s1</td>
      </tr>
      <tr style="height:6px">
       <td></td>
      </tr>
      <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_cpu">cpu</a>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_up_clocks_0">up_clocks_0</a>
       </td>
-      <td class="from">data_master&#160;&#160;</td>
+      <td class="from">sys_clk&#160;&#160;</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;s1</td>
+      <td class="to">&#160;&#160;clk1</td>
+     </tr>
+     <tr>
+      <td class="from">sys_clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset1</td>
      </tr>
     </table>
    </div>
@@ -493,16 +442,16 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <table class="connectionboxes">
      <tr>
       <td class="neighbor" rowspan="4">
-       <a href="#module_clk_0">clk_0</a>
+       <a href="#module_up_clocks_0">up_clocks_0</a>
       </td>
-      <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="33">cpu</td>
+      <td class="from">sys_clk&#160;&#160;</td>
+      <td class="main" rowspan="31">cpu</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
      </tr>
      <tr>
-      <td class="from">clk_reset&#160;&#160;</td>
+      <td class="from">sys_clk_reset&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;reset_n</td>
@@ -631,7 +580,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="from">instruction_master&#160;&#160;</td>
-      <td class="neighbor" rowspan="6">
+      <td class="neighbor" rowspan="4">
        <a href="#module_sram">sram</a>
       </td>
      </tr>
@@ -649,16 +598,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="to">&#160;&#160;avalon_sram_slave</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">jtag_debug_module_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;clock_reset_reset</td>
      </tr>
     </table>
    </div>
@@ -1288,28 +1227,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <table class="connectionboxes">
      <tr>
       <td class="neighbor" rowspan="4">
-       <a href="#module_clk_0">clk_0</a>
-      </td>
-      <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="9">jtag_uart</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clk</td>
-     </tr>
-     <tr>
-      <td class="from">clk_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="4">
        <a href="#module_cpu">cpu</a>
       </td>
       <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="9">jtag_uart</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;avalon_jtag_slave</td>
@@ -1319,6 +1240,24 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_up_clocks_0">up_clocks_0</a>
+      </td>
+      <td class="from">sys_clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">sys_clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
      </tr>
     </table>
    </div>
@@ -1436,28 +1375,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <table class="connectionboxes">
      <tr>
       <td class="neighbor" rowspan="4">
-       <a href="#module_clk_0">clk_0</a>
-      </td>
-      <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="9">sys_clk_timer</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clk</td>
-     </tr>
-     <tr>
-      <td class="from">clk_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="4">
        <a href="#module_cpu">cpu</a>
       </td>
       <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="9">sys_clk_timer</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
@@ -1467,6 +1388,24 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_up_clocks_0">up_clocks_0</a>
+      </td>
+      <td class="from">sys_clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clk</td>
+     </tr>
+     <tr>
+      <td class="from">sys_clk_reset&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
      </tr>
     </table>
    </div>
@@ -1620,16 +1559,16 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <table class="connectionboxes">
      <tr>
       <td class="neighbor" rowspan="4">
-       <a href="#module_clk_0">clk_0</a>
+       <a href="#module_cpu">cpu</a>
       </td>
-      <td class="from">clk&#160;&#160;</td>
+      <td class="from">data_master&#160;&#160;</td>
       <td class="main" rowspan="9">sysid</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;clk</td>
+      <td class="to">&#160;&#160;control_slave</td>
      </tr>
      <tr>
-      <td class="from">clk_reset&#160;&#160;</td>
+      <td class="from">jtag_debug_module_reset&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;reset</td>
@@ -1639,15 +1578,15 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="neighbor" rowspan="4">
-       <a href="#module_cpu">cpu</a>
+       <a href="#module_up_clocks_0">up_clocks_0</a>
       </td>
-      <td class="from">data_master&#160;&#160;</td>
+      <td class="from">sys_clk&#160;&#160;</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;control_slave</td>
+      <td class="to">&#160;&#160;clk</td>
      </tr>
      <tr>
-      <td class="from">jtag_debug_module_reset&#160;&#160;</td>
+      <td class="from">sys_clk_reset&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;reset</td>
@@ -1667,7 +1606,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">timestamp</td>
-        <td class="parametervalue">1785682627</td>
+        <td class="parametervalue">1785762494</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_CLK_CLOCK_RATE</td>
@@ -1700,7 +1639,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TIMESTAMP</td>
-        <td class="parametervalue">1785682627</td>
+        <td class="parametervalue">1785762494</td>
        </tr>
       </table>
      </td>
@@ -1735,15 +1674,15 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="neighbor" rowspan="4">
-       <a href="#module_clk_0">clk_0</a>
+       <a href="#module_up_clocks_0">up_clocks_0</a>
       </td>
-      <td class="from">clk&#160;&#160;</td>
+      <td class="from">sys_clk&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
      </tr>
      <tr>
-      <td class="from">clk_reset&#160;&#160;</td>
+      <td class="from">sys_clk_reset&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;reset</td>
@@ -1920,28 +1859,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <table class="connectionboxes">
      <tr>
       <td class="neighbor" rowspan="4">
-       <a href="#module_clk_0">clk_0</a>
-      </td>
-      <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="11">sram</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clock_reset</td>
-     </tr>
-     <tr>
-      <td class="from">clk_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clock_reset_reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="6">
        <a href="#module_cpu">cpu</a>
       </td>
       <td class="from">instruction_master&#160;&#160;</td>
+      <td class="main" rowspan="9">sram</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;avalon_sram_slave</td>
@@ -1952,8 +1873,20 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td class="to">&#160;&#160;avalon_sram_slave</td>
      </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
      <tr>
-      <td class="from">jtag_debug_module_reset&#160;&#160;</td>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_up_clocks_0">up_clocks_0</a>
+      </td>
+      <td class="from">sys_clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clock_reset</td>
+     </tr>
+     <tr>
+      <td class="from">sys_clk_reset&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clock_reset_reset</td>
@@ -2002,10 +1935,73 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
+  <a name="module_up_clocks_0"> </a>
+  <div>
+   <hr/>
+   <h2>up_clocks_0</h2>altera_up_clocks v13.0
+   <br/>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">board</td>
+        <td class="parametervalue">DE2</td>
+       </tr>
+       <tr>
+        <td class="parametername">sys_clk_freq</td>
+        <td class="parametervalue">50</td>
+       </tr>
+       <tr>
+        <td class="parametername">sdram_clk</td>
+        <td class="parametervalue">true</td>
+       </tr>
+       <tr>
+        <td class="parametername">vga_clk</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">audio_clk</td>
+        <td class="parametervalue">false</td>
+       </tr>
+       <tr>
+        <td class="parametername">audio_clk_freq</td>
+        <td class="parametervalue">12.288</td>
+       </tr>
+       <tr>
+        <td class="parametername">AUTO_CLK_IN_PRIMARY_CLOCK_RATE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">AUTO_DEVICE_FAMILY</td>
+        <td class="parametervalue">CYCLONEII</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">Cyclone II</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>(none)</td>
+    </tr>
+   </table>
+  </div>
   <table class="blueBar">
    <tr>
-    <td class="l">generation took 0.00 seconds</td>
-    <td class="r">rendering took 0.03 seconds</td>
+    <td class="l">generation took 0.02 seconds</td>
+    <td class="r">rendering took 0.02 seconds</td>
    </tr>
   </table>
  </body>

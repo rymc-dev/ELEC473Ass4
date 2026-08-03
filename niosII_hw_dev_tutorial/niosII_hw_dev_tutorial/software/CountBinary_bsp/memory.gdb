@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
 # SOPC Builder design path: C:/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/first_nios2_system.sopcinfo
 #
-# Generated: Sun Aug 02 16:01:45 BST 2026
+# Generated: Mon Aug 03 14:04:46 BST 2026
 
 # DO NOT MODIFY THIS FILE
 #

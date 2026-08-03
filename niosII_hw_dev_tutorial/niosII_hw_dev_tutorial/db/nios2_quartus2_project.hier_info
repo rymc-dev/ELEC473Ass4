@@ -21,6 +21,7 @@ SRAM_UB_N <= first_nios2_system:inst.sram_UB_N
 SRAM_CE_N <= first_nios2_system:inst.sram_CE_N
 SRAM_OE_N <= first_nios2_system:inst.sram_OE_N
 SRAM_WE_N <= first_nios2_system:inst.sram_WE_N
+DRAM_CLK <= first_nios2_system:inst.sdram_clk_clk
 LEDG[0] <= first_nios2_system:inst.led_pio_external_export[0]
 LEDG[1] <= first_nios2_system:inst.led_pio_external_export[1]
 LEDG[2] <= first_nios2_system:inst.led_pio_external_export[2]
@@ -50,7 +51,6 @@ SRAM_ADDR[17] <= first_nios2_system:inst.sram_ADDR[17]
 
 
 |nios2_quartus2_project|first_nios2_system:inst
-clk_clk => clk_clk.IN62
 led_pio_external_export[0] <= first_nios2_system_led_pio:led_pio.out_port
 led_pio_external_export[1] <= first_nios2_system_led_pio:led_pio.out_port
 led_pio_external_export[2] <= first_nios2_system_led_pio:led_pio.out_port
@@ -98,8 +98,9 @@ sram_UB_N <= first_nios2_system_sram:sram.SRAM_UB_N
 sram_CE_N <= first_nios2_system_sram:sram.SRAM_CE_N
 sram_OE_N <= first_nios2_system_sram:sram.SRAM_OE_N
 sram_WE_N <= first_nios2_system_sram:sram.SRAM_WE_N
-reset_reset_n => _.IN1
-reset_reset_n => _.IN1
+clk_clk => clk_clk.IN1
+reset_reset => reset_reset.IN1
+sdram_clk_clk <= first_nios2_system_up_clocks_0:up_clocks_0.SDRAM_CLK
 
 
 |nios2_quartus2_project|first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem
@@ -10510,41 +10511,39 @@ address => readdata[27].DATAIN
 address => readdata[25].DATAIN
 address => readdata[22].DATAIN
 address => readdata[21].DATAIN
-address => readdata[19].DATAIN
-address => readdata[18].DATAIN
-address => readdata[17].DATAIN
-address => readdata[16].DATAIN
-address => readdata[14].DATAIN
+address => readdata[20].DATAIN
+address => readdata[15].DATAIN
 address => readdata[12].DATAIN
-address => readdata[11].DATAIN
 address => readdata[9].DATAIN
 address => readdata[7].DATAIN
-address => readdata[6].DATAIN
+address => readdata[5].DATAIN
+address => readdata[4].DATAIN
+address => readdata[3].DATAIN
+address => readdata[2].DATAIN
 address => readdata[1].DATAIN
-address => readdata[0].DATAIN
 clock => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
-readdata[0] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[0] <= <GND>
 readdata[1] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[2] <= <GND>
-readdata[3] <= <GND>
-readdata[4] <= <GND>
-readdata[5] <= <GND>
-readdata[6] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[2] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[3] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[4] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[5] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[6] <= <GND>
 readdata[7] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[8] <= <GND>
 readdata[9] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[10] <= <GND>
-readdata[11] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[11] <= <GND>
 readdata[12] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[13] <= <GND>
-readdata[14] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[15] <= <GND>
-readdata[16] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[17] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[18] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[19] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[20] <= <GND>
+readdata[14] <= <GND>
+readdata[15] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[16] <= <GND>
+readdata[17] <= <GND>
+readdata[18] <= <GND>
+readdata[19] <= <GND>
+readdata[20] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[21] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[22] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[23] <= <GND>
@@ -10812,6 +10811,75 @@ SRAM_UB_N <= SRAM_UB_N~reg0.DB_MAX_OUTPUT_PORT_TYPE
 SRAM_CE_N <= SRAM_CE_N~reg0.DB_MAX_OUTPUT_PORT_TYPE
 SRAM_OE_N <= SRAM_OE_N~reg0.DB_MAX_OUTPUT_PORT_TYPE
 SRAM_WE_N <= SRAM_WE_N~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nios2_quartus2_project|first_nios2_system:inst|first_nios2_system_up_clocks_0:up_clocks_0
+CLOCK_50 => CLOCK_50.IN1
+reset => ~NO_FANOUT~
+SDRAM_CLK <= altpll:DE_Clock_Generator_System.clk
+sys_clk <= altpll:DE_Clock_Generator_System.clk
+sys_reset_n <= altpll:DE_Clock_Generator_System.locked
+
+
+|nios2_quartus2_project|first_nios2_system:inst|first_nios2_system_up_clocks_0:up_clocks_0|altpll:DE_Clock_Generator_System
+inclk[0] => pll.CLK
+inclk[1] => ~NO_FANOUT~
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => ~NO_FANOUT~
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= <GND>
+clk[4] <= <GND>
+clk[5] <= <GND>
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= pll.LOCKED
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= sclkout1.DB_MAX_OUTPUT_PORT_TYPE
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
 
 
 |nios2_quartus2_project|first_nios2_system:inst|altera_merlin_master_translator:cpu_instruction_master_translator
