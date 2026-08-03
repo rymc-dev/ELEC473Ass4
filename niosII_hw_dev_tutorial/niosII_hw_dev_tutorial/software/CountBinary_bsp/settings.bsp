@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Aug 3, 2026 2:18:56 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1785763136325</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Aug 3, 2026 3:12:23 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1785766343316</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\ryanm\OneDrive\Desktop\ELEC374Ass4\niosII_hw_dev_tutorial\niosII_hw_dev_tutorial\software\CountBinary_bsp</BspGeneratedLocation>
         <BspSettingsFile>C:\Users\ryanm\OneDrive\Desktop\ELEC374Ass4\niosII_hw_dev_tutorial\niosII_hw_dev_tutorial\software\CountBinary_bsp\settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\ryanm\OneDrive\Desktop\ELEC374Ass4\niosII_hw_dev_tutorial\niosII_hw_dev_tutorial\first_nios2_system.sopcinfo</SopcDesignFile>
@@ -897,6 +897,12 @@
                 <addressRange>0x00089038 - 0x0008903F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>sdram</slaveDescriptor>
+                <addressRange>0x01000000 - 0x017FFFFF</addressRange>
+                <addressSpan>8388608</addressSpan>
+                <attributes>memory</attributes>
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>

@@ -181,6 +181,23 @@ $(MEM_0)_CREATE_LANES := 0
 .PHONY: onchip_mem
 onchip_mem: check_elf_exists $(MEM_INIT_DIR)/$(MEM_0).hex $(HDL_SIM_DIR)/$(MEM_0).dat $(HDL_SIM_DIR)/$(MEM_0).sym
 
+# Memory: sdram
+MEM_1 := sdram
+$(MEM_1)_NAME := sdram
+DAT_FILES += $(HDL_SIM_DIR)/$(MEM_1).dat
+HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_1).dat
+SYM_FILES += $(HDL_SIM_DIR)/$(MEM_1).sym
+HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_1).sym
+$(MEM_1)_START := 0x01000000
+$(MEM_1)_END := 0x017fffff
+$(MEM_1)_HIERARCHICAL_PATH := sdram
+$(MEM_1)_WIDTH := 16
+$(MEM_1)_ENDIANNESS := --little-endian-mem
+$(MEM_1)_CREATE_LANES := 0
+
+.PHONY: sdram
+sdram: check_elf_exists $(HDL_SIM_DIR)/$(MEM_1).dat $(HDL_SIM_DIR)/$(MEM_1).sym
+
 
 #END OF BSP SPECIFIC
 

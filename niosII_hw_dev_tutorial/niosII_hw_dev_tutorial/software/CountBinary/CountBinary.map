@@ -108,6 +108,7 @@ Name             Origin             Length             Attributes
 reset            0x00000000         0x00000020
 sram             0x00000020         0x0007ffe0
 onchip_mem       0x00080000         0x00005000
+sdram            0x01000000         0x00800000
 *default*        0x00000000         0xffffffff
 
 Linker script and memory map
@@ -125,6 +126,7 @@ END GROUP
 LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a
                 0x00000000                __alt_mem_sram = 0x0
                 0x00080000                __alt_mem_onchip_mem = 0x80000
+                0x01000000                __alt_mem_sdram = 0x1000000
 
 .entry          0x00000000       0x20
  *(.entry)
@@ -561,6 +563,13 @@ LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/
                 0x00080000                . = ALIGN (0x4)
                 0x00080000                PROVIDE (_alt_partition_onchip_mem_end, ABSOLUTE (.))
                 0x000033fc                PROVIDE (_alt_partition_onchip_mem_load_addr, LOADADDR (.onchip_mem))
+
+.sdram          0x01000000        0x0 load address 0x000033fc
+                0x01000000                PROVIDE (_alt_partition_sdram_start, ABSOLUTE (.))
+ *(.sdram. sdram.*)
+                0x01000000                . = ALIGN (0x4)
+                0x01000000                PROVIDE (_alt_partition_sdram_end, ABSOLUTE (.))
+                0x000033fc                PROVIDE (_alt_partition_sdram_load_addr, LOADADDR (.sdram))
 
 .stab
  *(.stab)

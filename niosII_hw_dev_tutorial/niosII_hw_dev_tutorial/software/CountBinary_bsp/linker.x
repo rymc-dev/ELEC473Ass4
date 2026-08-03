@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
  * SOPC Builder design path: C:/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/first_nios2_system.sopcinfo
  *
- * Generated: Mon Aug 03 14:04:46 BST 2026
+ * Generated: Mon Aug 03 15:12:23 BST 2026
  */
 
 /*
@@ -53,11 +53,13 @@ MEMORY
     reset : ORIGIN = 0x0, LENGTH = 32
     sram : ORIGIN = 0x20, LENGTH = 524256
     onchip_mem : ORIGIN = 0x80000, LENGTH = 20480
+    sdram : ORIGIN = 0x1000000, LENGTH = 8388608
 }
 
 /* Define symbols for each memory base-address */
 __alt_mem_sram = 0x0;
 __alt_mem_onchip_mem = 0x80000;
+__alt_mem_sdram = 0x1000000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -337,6 +339,23 @@ SECTIONS
     } > onchip_mem
 
     PROVIDE (_alt_partition_onchip_mem_load_addr = LOADADDR(.onchip_mem));
+
+    /*
+     *
+     * This section's LMA is set to the .text region.
+     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
+     *
+     */
+
+    .sdram : AT ( LOADADDR (.onchip_mem) + SIZEOF (.onchip_mem) )
+    {
+        PROVIDE (_alt_partition_sdram_start = ABSOLUTE(.));
+        *(.sdram. sdram.*)
+        . = ALIGN(4);
+        PROVIDE (_alt_partition_sdram_end = ABSOLUTE(.));
+    } > sdram
+
+    PROVIDE (_alt_partition_sdram_load_addr = LOADADDR(.sdram));
 
     /*
      * Stabs debugging sections.
