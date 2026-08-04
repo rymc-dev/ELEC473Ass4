@@ -34,7 +34,6 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 160 20)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 528 592 592 616))
 )
 (pin
 	(output)
@@ -52,7 +51,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 504 360 568 384))
 )
 (pin
 	(output)
@@ -70,7 +68,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 512 496 584 520))
 )
 (pin
 	(output)
@@ -88,7 +85,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 472 528 544 552))
 )
 (pin
 	(output)
@@ -106,7 +102,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 496 544 576 568))
 )
 (pin
 	(output)
@@ -124,7 +119,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 552 560 632 584))
 )
 (pin
 	(output)
@@ -142,7 +136,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 632 552 712 576))
 )
 (pin
 	(output)
@@ -160,7 +153,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 520 456 592 480))
 )
 (pin
 	(output)
@@ -177,7 +169,6 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1536 392 1608 416))
 )
 (pin
 	(output)
@@ -195,7 +186,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 376 576 440 600))
 )
 (pin
 	(output)
@@ -213,7 +203,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 376 632 448 656))
 )
 (pin
 	(output)
@@ -231,7 +220,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 368 464 440 488))
 )
 (pin
 	(output)
@@ -249,7 +237,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 392 688 464 712))
 )
 (pin
 	(output)
@@ -267,7 +254,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 368 688 440 712))
 )
 (pin
 	(output)
@@ -285,7 +271,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 552 872 624 896))
 )
 (pin
 	(output)
@@ -303,7 +288,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 360 616 432 640))
 )
 (pin
 	(output)
@@ -321,7 +305,6 @@ applicable agreement for further details.
 		(line (pt 98 12)(pt 94 8))
 	)
 	(flipy)
-	(annotation_block (location)(rect 472 784 536 808))
 )
 (pin
 	(bidir)
@@ -340,7 +323,6 @@ applicable agreement for further details.
 	)
 	(flipy)
 	(text "VCC" (rect 148 7 172 20)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 496 432 576 456))
 )
 (pin
 	(bidir)
@@ -359,7 +341,6 @@ applicable agreement for further details.
 	)
 	(flipy)
 	(text "VCC" (rect 148 7 172 20)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 432 720 504 744))
 )
 (symbol
 	(rect 728 600 760 616)
@@ -447,7 +428,7 @@ applicable agreement for further details.
 		(pt 384 72)
 		(output)
 		(text "sdram_clk_clk" (rect 0 0 99 16)(font "Arial" (font_size 8)))
-		(text "sdram_clk_clk" (rect 136 61 235 77)(font "Arial" (font_size 8)))
+		(text "sdram_clk_clk" (rect 136 61 219 77)(font "Arial" (font_size 8)))
 		(line (pt 384 72)(pt 224 72))
 	)
 	(port

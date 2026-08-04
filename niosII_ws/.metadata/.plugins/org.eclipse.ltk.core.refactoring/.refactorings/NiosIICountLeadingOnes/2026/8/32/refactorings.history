@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;NiosIICountLeadingOnes/count_binary.c&apos; to &apos;count_leading_ones.c&apos;" description="Rename resource &apos;count_binary.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="count_binary.c" name="count_leading_ones.c" stamp="1785875654692" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;NiosIICountLeadingOnes/count_binary.h&apos; to &apos;count_leading_ones.h&apos;" description="Rename resource &apos;count_binary.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="count_binary.h" name="count_leading_ones.h" stamp="1785875670206" updateReferences="true"/>
+</session>
