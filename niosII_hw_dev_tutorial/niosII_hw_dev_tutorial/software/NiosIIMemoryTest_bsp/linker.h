@@ -2,9 +2,9 @@
  * linker.h - Linker script mapping information
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
- * SOPC Builder design path: C:/Users/ryanm/OneDrive/Desktop/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/first_nios2_system.sopcinfo
+ * SOPC Builder design path: C:/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/first_nios2_system.sopcinfo
  *
- * Generated: Sat Aug 01 19:09:19 BST 2026
+ * Generated: Tue Aug 04 11:35:52 BST 2026
  */
 
 /*
@@ -65,10 +65,14 @@
  *
  */
 
-#define ONCHIP_MEM_REGION_BASE 0x8020
-#define ONCHIP_MEM_REGION_SPAN 20448
-#define RESET_REGION_BASE 0x8000
+#define ONCHIP_MEM_REGION_BASE 0x80000
+#define ONCHIP_MEM_REGION_SPAN 20480
+#define RESET_REGION_BASE 0x0
 #define RESET_REGION_SPAN 32
+#define SDRAM_REGION_BASE 0x1000000
+#define SDRAM_REGION_SPAN 8388608
+#define SRAM_REGION_BASE 0x20
+#define SRAM_REGION_SPAN 524256
 
 
 /*
@@ -76,11 +80,11 @@
  *
  */
 
-#define ALT_EXCEPTIONS_DEVICE ONCHIP_MEM
-#define ALT_RESET_DEVICE ONCHIP_MEM
-#define ALT_RODATA_DEVICE ONCHIP_MEM
-#define ALT_RWDATA_DEVICE ONCHIP_MEM
-#define ALT_TEXT_DEVICE ONCHIP_MEM
+#define ALT_EXCEPTIONS_DEVICE SRAM
+#define ALT_RESET_DEVICE SRAM
+#define ALT_RODATA_DEVICE SRAM
+#define ALT_RWDATA_DEVICE SRAM
+#define ALT_TEXT_DEVICE SRAM
 
 
 /*
@@ -96,6 +100,7 @@
  *
  */
 
+#define ALT_LOAD_COPY_EXCEPTIONS
 #define ALT_LOAD_COPY_RWDATA
 
 #endif /* __LINKER_H_ */

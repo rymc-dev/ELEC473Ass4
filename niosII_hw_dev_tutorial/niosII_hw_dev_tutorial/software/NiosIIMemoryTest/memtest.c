@@ -150,6 +150,7 @@ static void MenuHeader(void)
 {
   printf("\n\n");
   printf("             <---->   Nios II Memory Test.   <---->\n");
+  printf("             Name: Ryan McKee   Student ID: 201954749\n");
   printf("This software example tests the memory in your system to assure it\n");
   printf("is working properly.  This test is destructive to the contents of\n");
   printf("the memory it tests. Assure the memory being tested does not contain\n");
@@ -648,6 +649,7 @@ static void TestRam(void)
   memory_size = (memory_end - memory_base);
 
   printf("\n");
+  printf("Name: Ryan McKee    Student ID: 201954749\n");
   printf("Testing RAM from 0x%X to 0x%X\n", memory_base, (memory_base + memory_size));
 
   /* Test Data Bus. */

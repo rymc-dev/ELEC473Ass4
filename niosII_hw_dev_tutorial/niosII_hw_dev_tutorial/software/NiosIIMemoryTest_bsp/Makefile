@@ -103,7 +103,7 @@ ACDS_VERSION := 13.0sp1
 # BUILD_NUMBER: 232
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := C:/Users/ryanm/OneDrive/Desktop/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/first_nios2_system.sopcinfo
+SOPC_FILE := C:/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/first_nios2_system.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

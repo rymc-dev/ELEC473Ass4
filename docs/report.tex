@@ -63,9 +63,119 @@ Part C we shall utilize PWM to control the inensite of of LEDR10.
 
 \chapter{Part A - SRAM \& SDRAM}
 
+system configuration: 
 
+TODO: ADD Block diagram here. 
+
+Would flash memory test program over JTAG to the opposited memory location of 
+which tested, ect.. Memory test added to sdram if testing sram and vice versa.
+
+Memory Testing locations: 
+
+Region | Origin | Length | End address
+--------------------------------------
+SRAM   | 0x0000000 |  0x80000 (512 KB) | 0x007FFFF
+sdram  | 0x1000020 | 0x7FFFE0 (8MB)    | 0x17FFFFF
+
+
+SRAM Test 
+\begin{verbatim}
+    
+
+             <---->   Nios II Memory Test.   <---->
+Name: Ryan McKee   ID: 201954749
+This software example tests the memory in your system to assure it
+is working properly.  This test is destructive to the contents of
+the memory it tests. Assure the memory being tested does not contain
+the executable or data sections of this code or the exception address
+of the system.
+
+
+----------------------------------
+      Memory Test Main Menu
+----------------------------------
+     a:  Test RAM
+     b:  Test Flash
+     q:  Exit
+----------------------------------
+
+Select Choice (a-b): [Followed by <enter>]
+ -ERROR: 
+ is an invalid entry.  Please try again
+
+Press enter to continue...
+
+
+----------------------------------
+      Memory Test Main Menu
+----------------------------------
+     a:  Test RAM
+     b:  Test Flash
+     q:  Exit
+----------------------------------
+
+Select Choice (a-b): [Followed by <enter>]
+A
+Base address to start memory test: (i.e. 0x800000)
+>
+0x0000000
+End Address:
+>
+0x007FFFF
+\end{verbatim}
+
+
+SDRAM Test Screen Dumps.
+To test SDRAM, I had to edit linker settings to move all .test, rodata rwdata bus head stack to sram 
+to keep sdram totally free for destructive testing otherwise 
+the test would hang or fail. 
+
+so each of the .text and such in settings.bsp of the bsp package needed to be changed to utilize sram 
+instead of sram for proper testing. 
+
+\begin{verbatim}
+
+             <---->   Nios II Memory Test.   <---->
+Name: Ryan McKee
+Student ID: 201954749
+This software example tests the memory in your system to assure it
+is working properly.  This test is destructive to the contents of
+the memory it tests. Assure the memory being tested does not contain
+the executable or data sections of this code or the exception address
+of the system.
+
+
+----------------------------------
+      Memory Test Main Menu
+----------------------------------
+     a:  Test RAM
+     b:  Test Flash
+     q:  Exit
+----------------------------------
+
+Select Choice (a-b): [Followed by <enter>]
+a
+Base address to start memory test: (i.e. 0x800000)
+>
+0x1000000
+End Address:
+>
+0x17FFFFF
+
+Testing RAM from 0x1000000 to 0x17FFFFF
+ -Data bus test passed
+ -Address bus test passed
+ -Byte and half-word access test passed
+ -Testing each bit in memory device. . .  passed
+Memory at 0x1000000 Okay
+
+Press enter to continue...
+
+\end{verbatim}
 
 \chapter{Part B - Custom Instruction}
+
+
 
 \chapter{Part C - PWM Module}
 

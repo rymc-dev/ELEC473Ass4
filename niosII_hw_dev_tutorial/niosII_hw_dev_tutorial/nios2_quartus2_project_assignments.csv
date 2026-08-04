@@ -14,7 +14,7 @@
 
 # Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 # File: C:\Users\ryanm\OneDrive\Desktop\ELEC374Ass4\niosII_hw_dev_tutorial\niosII_hw_dev_tutorial\nios2_quartus2_project_assignments.csv
-# Generated on: Tue Aug 04 01:49:26 2026
+# Generated on: Tue Aug 04 11:17:47 2026
 
 Status,From,To,Assignment Name,Value,Enabled,Entity,Comment,Tag
 Ok,,PLD_CLOCKINPUT,Location,PIN_N2,Yes,,,
@@ -110,6 +110,6 @@ Ok,,DRAM_RAS_N,Location,PIN_AB4,Yes,,,
 Ok,,DRAM_WE_N,Location,PIN_AD3,Yes,,,
 Ok,,DRAM_BA[0],Location,PIN_AE2,Yes,,,
 Ok,,DRAM_BA[1],Location,PIN_AE3,Yes,,,
-Ok,,DRAM_DQM[1],Location,PIN_AD2,Yes,,,
-Ok,,DRAM_DQM[0],Location,PIN_Y5,Yes,,,
+Ok,,DRAM_DQM[1],Location,PIN_Y5,Yes,,,
+Ok,,DRAM_DQM[0],Location,PIN_AD2,Yes,,,
 ,<<new>>,<<new>>,<<new>>,,,,,
