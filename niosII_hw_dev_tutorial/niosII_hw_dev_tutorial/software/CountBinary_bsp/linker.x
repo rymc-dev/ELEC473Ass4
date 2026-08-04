@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
  * SOPC Builder design path: C:/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/first_nios2_system.sopcinfo
  *
- * Generated: Mon Aug 03 15:12:23 BST 2026
+ * Generated: Tue Aug 04 01:31:37 BST 2026
  */
 
 /*
@@ -50,10 +50,10 @@
 
 MEMORY
 {
-    reset : ORIGIN = 0x0, LENGTH = 32
-    sram : ORIGIN = 0x20, LENGTH = 524256
+    sram : ORIGIN = 0x0, LENGTH = 524288
     onchip_mem : ORIGIN = 0x80000, LENGTH = 20480
-    sdram : ORIGIN = 0x1000000, LENGTH = 8388608
+    reset : ORIGIN = 0x1000000, LENGTH = 32
+    sdram : ORIGIN = 0x1000020, LENGTH = 8388576
 }
 
 /* Define symbols for each memory base-address */
@@ -114,7 +114,7 @@ SECTIONS
         KEEP (*(.exceptions.exit));
         KEEP (*(.exceptions));
         PROVIDE (__ram_exceptions_end = ABSOLUTE(.));
-    } > sram
+    } > sdram
 
     PROVIDE (__flash_exceptions_start = LOADADDR(.exceptions));
 

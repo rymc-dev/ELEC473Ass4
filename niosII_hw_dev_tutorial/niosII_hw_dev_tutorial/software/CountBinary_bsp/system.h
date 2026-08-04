@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
  * SOPC Builder design path: C:/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/first_nios2_system.sopcinfo
  *
- * Generated: Mon Aug 03 15:12:23 BST 2026
+ * Generated: Tue Aug 04 01:31:37 BST 2026
  */
 
 /*
@@ -71,7 +71,7 @@
 #define ALT_CPU_DCACHE_LINE_SIZE 0
 #define ALT_CPU_DCACHE_LINE_SIZE_LOG2 0
 #define ALT_CPU_DCACHE_SIZE 0
-#define ALT_CPU_EXCEPTION_ADDR 0x20
+#define ALT_CPU_EXCEPTION_ADDR 0x1000020
 #define ALT_CPU_FLUSHDA_SUPPORTED
 #define ALT_CPU_FREQ 50000000
 #define ALT_CPU_HARDWARE_DIVIDE_PRESENT 0
@@ -85,7 +85,7 @@
 #define ALT_CPU_ICACHE_SIZE 2048
 #define ALT_CPU_INST_ADDR_WIDTH 0x19
 #define ALT_CPU_NAME "cpu"
-#define ALT_CPU_RESET_ADDR 0x0
+#define ALT_CPU_RESET_ADDR 0x1000000
 
 
 /*
@@ -103,7 +103,7 @@
 #define NIOS2_DCACHE_LINE_SIZE 0
 #define NIOS2_DCACHE_LINE_SIZE_LOG2 0
 #define NIOS2_DCACHE_SIZE 0
-#define NIOS2_EXCEPTION_ADDR 0x20
+#define NIOS2_EXCEPTION_ADDR 0x1000020
 #define NIOS2_FLUSHDA_SUPPORTED
 #define NIOS2_HARDWARE_DIVIDE_PRESENT 0
 #define NIOS2_HARDWARE_MULTIPLY_PRESENT 0
@@ -115,7 +115,7 @@
 #define NIOS2_ICACHE_LINE_SIZE_LOG2 5
 #define NIOS2_ICACHE_SIZE 2048
 #define NIOS2_INST_ADDR_WIDTH 0x19
-#define NIOS2_RESET_ADDR 0x0
+#define NIOS2_RESET_ADDR 0x1000000
 
 
 /*
@@ -344,7 +344,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1785764828
+#define SYSID_TIMESTAMP 1785803362
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

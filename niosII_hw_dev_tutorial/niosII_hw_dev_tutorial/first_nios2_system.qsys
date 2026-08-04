@@ -47,7 +47,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -99,7 +99,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -112,7 +112,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -142,6 +142,19 @@
          type = "String";
       }
    }
+   element sys_clk_timer.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "561152";
+         type = "String";
+      }
+   }
    element onchip_mem.s1
    {
       datum _lockedAddress
@@ -165,19 +178,6 @@
       datum baseAddress
       {
          value = "16777216";
-         type = "String";
-      }
-   }
-   element sys_clk_timer.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "561152";
          type = "String";
       }
    }
@@ -216,7 +216,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -229,7 +229,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -248,7 +248,7 @@
  <parameter name="projectName">nios2_quartus2_project.qpf</parameter>
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1785764246275" />
+ <parameter name="timeStamp" value="1785805187136" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
@@ -349,9 +349,9 @@
   <parameter name="cpuID_stored" value="0" />
   <parameter name="breakOffset" value="32" />
   <parameter name="userDefinedSettings" value="" />
-  <parameter name="resetSlave">sram.avalon_sram_slave</parameter>
+  <parameter name="resetSlave" value="sdram.s1" />
   <parameter name="mmu_TLBMissExcSlave" value="None" />
-  <parameter name="exceptionSlave">sram.avalon_sram_slave</parameter>
+  <parameter name="exceptionSlave" value="sdram.s1" />
   <parameter name="breakSlave">cpu.jtag_debug_module</parameter>
   <parameter name="setting_perfCounterWidth" value="32" />
   <parameter name="setting_interruptControllerType" value="Internal" />

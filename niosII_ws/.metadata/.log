@@ -258,3 +258,74 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.
 
 !ENTRY com.altera.sbtgui.launch 1 0 2026-08-03 15:12:57.926
 !MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x89030 --id=0x0 --timestamp=1785764828 /cygdrive/c/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/software/CountBinary/CountBinary.elf]
+!SESSION 2026-08-04 01:35:09.218 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-08-04 01:36:09.470
+!MESSAGE Indexed 'BinaryCount_bsp' (81 sources, 60 headers) in 0.69 sec: 952 declarations; 2,341 references; 117 unresolved inclusions; 5 syntax errors; 199 unresolved names (5.70%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-08-04 01:36:11.283
+!MESSAGE Indexed 'BinaryCount' (1 sources, 14 headers) in 0.03 sec: 20 declarations; 75 references; 19 unresolved inclusions; 0 syntax errors; 9 unresolved names (8.65%)
+!SESSION 2026-08-04 01:37:37.048 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-08-04 01:38:22.197
+!MESSAGE Indexed 'BinCount_bsp' (81 sources, 60 headers) in 0.82 sec: 952 declarations; 2,341 references; 117 unresolved inclusions; 5 syntax errors; 199 unresolved names (5.70%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-08-04 01:38:23.825
+!MESSAGE Indexed 'BinCount' (1 sources, 14 headers) in 0.03 sec: 20 declarations; 75 references; 19 unresolved inclusions; 0 syntax errors; 9 unresolved names (8.65%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 01:39:26.520
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x89030 --id=0x0 --timestamp=1785803362]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 01:39:29.009
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x89030 --id=0x0 --timestamp=1785803362 /cygdrive/c/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/software/BinCount/BinCount.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2026-08-04 01:39:31.758
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --go, --sidp=0x89030, --id=0x0, --timestamp=1785803362, /cygdrive/c/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/software/BinCount/BinCount.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2026-08-04 01:39:31.762
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 01:46:14.330
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x89030 --id=0x0 --timestamp=1785803362]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 01:46:16.870
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x89030 --id=0x0 --timestamp=1785803362 /cygdrive/c/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/software/BinCount/BinCount.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-08-04 01:47:34.094
+!MESSAGE Indexed 'NiosIIMemoryTesting_bsp' (81 sources, 60 headers) in 0.61 sec: 952 declarations; 2,341 references; 117 unresolved inclusions; 5 syntax errors; 199 unresolved names (5.70%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-08-04 01:47:36.226
+!MESSAGE Indexed 'NiosIIMemoryTesting' (1 sources, 13 headers) in 0.03 sec: 135 declarations; 770 references; 22 unresolved inclusions; 0 syntax errors; 84 unresolved names (8.49%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 01:48:26.764
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x89030 --id=0x0 --timestamp=1785803362]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 01:48:29.330
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x89030 --id=0x0 --timestamp=1785803362 /cygdrive/c/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/software/NiosIIMemoryTesting/NiosIIMemoryTesting.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 01:58:39.933
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 01:58:41.153
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x89030 --id=0x0 --timestamp=1785803362]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 01:58:44.141
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x89030 --id=0x0 --timestamp=1785803362 /cygdrive/c/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/software/NiosIIMemoryTesting/NiosIIMemoryTesting.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 02:02:28.677
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x89030 --id=0x0 --timestamp=1785803362]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 02:02:31.670
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x89030 --id=0x0 --timestamp=1785803362 /cygdrive/c/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/software/CountBinary/CountBinary.elf]
