@@ -32,7 +32,7 @@
  --					Bank 4:		1.8V
  --					Bank 5:		1.8V
  --					Bank 6:		1.8V
- --					Bank 7:		3.3V
+ --					Bank 7:		1.8V
  --					Bank 8:		1.8V
  -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
  --					It can also be used to report unused dedicated pins. The connection
@@ -104,14 +104,14 @@ SRAM_DQ[3]                   : AA9       : bidir  : 1.8 V             :         
 SRAM_DQ[4]                   : AA10      : bidir  : 1.8 V             :         : 8         : Y              
 SRAM_DQ[6]                   : AA11      : bidir  : 1.8 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA12      :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :         : 7         :                
+LEDR_10                      : AA13      : output : 1.8 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA14      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA16      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA17      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA18      :        :                   :         : 7         :                
 VCCA_PLL4                    : AA19      : power  :                   : 1.2V    :           :                
-LEDG[6]                      : AA20      : output : 3.3-V LVTTL       :         : 7         : Y              
+LEDG[6]                      : AA20      : output : 1.8 V             :         : 7         : Y              
 GND_PLL4                     : AA21      : gnd    :                   :         :           :                
 VCCIO6                       : AA22      : power  :                   : 1.8V    : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA23      :        :                   :         : 6         :                
@@ -131,15 +131,15 @@ SRAM_DQ[5]                   : AB10      : bidir  : 1.8 V             :         
 GND                          : AB11      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB12      :        :                   :         : 8         :                
 VCCIO8                       : AB13      : power  :                   : 1.8V    : 8         :                
-VCCIO7                       : AB14      : power  :                   : 3.3V    : 7         :                
+VCCIO7                       : AB14      : power  :                   : 1.8V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB15      :        :                   :         : 7         :                
 GND                          : AB16      : gnd    :                   :         :           :                
-VCCIO7                       : AB17      : power  :                   : 3.3V    : 7         :                
+VCCIO7                       : AB17      : power  :                   : 1.8V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB18      :        :                   :         : 7         :                
 GND                          : AB19      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB20      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :         : 7         :                
-VCCIO7                       : AB22      : power  :                   : 3.3V    : 7         :                
+VCCIO7                       : AB22      : power  :                   : 1.8V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB23      :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB24      :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB25      :        :                   :         : 6         :                
@@ -189,7 +189,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AD16      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD17      :        :                   :         : 7         :                
 GND                          : AD18      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD19      :        :                   :         : 7         :                
-VCCIO7                       : AD20      : power  :                   : 3.3V    : 7         :                
+VCCIO7                       : AD20      : power  :                   : 1.8V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD21      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD22      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD23      :        :                   :         : 7         :                
@@ -217,7 +217,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AE18      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE19      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE20      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE21      :        :                   :         : 7         :                
-LEDG[0]                      : AE22      : output : 3.3-V LVTTL       :         : 7         : Y              
+LEDG[0]                      : AE22      : output : 1.8 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE23      :        :                   :         : 7         :                
 ~LVDS150p/nCEO~              : AE24      : output : 1.8 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE25      :        :                   :         : 6         :                
@@ -236,15 +236,15 @@ GND                          : AF12      : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF13      :        :                   :         : 8         :                
 GND+                         : AF14      :        :                   :         : 7         :                
 GND                          : AF15      : gnd    :                   :         :           :                
-VCCIO7                       : AF16      : power  :                   : 3.3V    : 7         :                
+VCCIO7                       : AF16      : power  :                   : 1.8V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF17      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF18      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF19      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF20      :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF21      :        :                   :         : 7         :                
-LEDG[1]                      : AF22      : output : 3.3-V LVTTL       :         : 7         : Y              
+LEDG[1]                      : AF22      : output : 1.8 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF23      :        :                   :         : 7         :                
-VCCIO7                       : AF24      : power  :                   : 3.3V    : 7         :                
+VCCIO7                       : AF24      : power  :                   : 1.8V    : 7         :                
 GND                          : AF25      : gnd    :                   :         :           :                
 GND                          : B1        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B2        :        :                   :         : 2         :                
@@ -652,8 +652,8 @@ VCCINT                       : U13       : power  :                   : 1.2V    
 VCCINT                       : U14       : power  :                   : 1.2V    :           :                
 VCCINT                       : U15       : power  :                   : 1.2V    :           :                
 VCCINT                       : U16       : power  :                   : 1.2V    :           :                
-LEDG[5]                      : U17       : output : 3.3-V LVTTL       :         : 7         : Y              
-LEDG[4]                      : U18       : output : 3.3-V LVTTL       :         : 7         : Y              
+LEDG[5]                      : U17       : output : 1.8 V             :         : 7         : Y              
+LEDG[4]                      : U18       : output : 1.8 V             :         : 7         : Y              
 GND                          : U19       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U20       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U21       :        :                   :         : 6         :                
@@ -676,10 +676,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : V11       :        :                   :      
 VCCIO8                       : V12       : power  :                   : 1.8V    : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V13       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V14       :        :                   :         : 8         :                
-VCCIO7                       : V15       : power  :                   : 3.3V    : 7         :                
+VCCIO7                       : V15       : power  :                   : 1.8V    : 7         :                
 VCCINT                       : V16       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V17       :        :                   :         : 7         :                
-LEDG[3]                      : V18       : output : 3.3-V LVTTL       :         : 7         : Y              
+LEDG[3]                      : V18       : output : 1.8 V             :         : 7         : Y              
 VCCIO6                       : V19       : power  :                   : 1.8V    : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V20       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V21       :        :                   :         : 6         :                
@@ -705,8 +705,8 @@ GND                          : W14       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : W15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W16       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W17       :        :                   :         : 7         :                
-VCCIO7                       : W18       : power  :                   : 3.3V    : 7         :                
-LEDG[2]                      : W19       : output : 3.3-V LVTTL       :         : 7         : Y              
+VCCIO7                       : W18       : power  :                   : 1.8V    : 7         :                
+LEDG[2]                      : W19       : output : 1.8 V             :         : 7         : Y              
 GND_PLL4                     : W20       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W21       :        :                   :         : 6         :                
 GND                          : W22       : gnd    :                   :         :           :                
@@ -731,7 +731,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : Y14       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y16       :        :                   :         : 7         :                
 GND                          : Y17       : gnd    :                   :         :           :                
-LEDG[7]                      : Y18       : output : 3.3-V LVTTL       :         : 7         : Y              
+LEDG[7]                      : Y18       : output : 1.8 V             :         : 7         : Y              
 GNDA_PLL4                    : Y19       : gnd    :                   :         :           :                
 VCCD_PLL4                    : Y20       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y21       :        :                   :         : 6         :                

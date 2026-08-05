@@ -3646,3 +3646,49 @@ org.eclipse.core.internal.resources.ResourceException: Resource is out of sync w
 
 !ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 21:41:00.936
 !MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x89030 --id=0x0 --timestamp=1785874508 /cygdrive/c/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/software/NiosIICountLeadingOnes/NiosIICountLeadingOnes.elf]
+!SESSION 2026-08-04 22:35:54.363 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-08-04 22:36:49.991
+!MESSAGE Indexed 'NiosIICountLeadingOnesCustomInstruction_bsp' (81 sources, 106 headers) in 1.10 sec: 2,186 declarations; 3,469 references; 94 unresolved inclusions; 4 syntax errors; 178 unresolved names (3.05%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-08-04 22:36:51.091
+!MESSAGE Indexed 'NiosIICountLeadingOnesCustomInstruction' (1 sources, 14 headers) in 0.02 sec: 20 declarations; 75 references; 19 unresolved inclusions; 0 syntax errors; 9 unresolved names (8.65%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 22:49:53.658
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x89030 --id=0x0 --timestamp=1785879213]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 22:49:55.912
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x89030 --id=0x0 --timestamp=1785879213 /cygdrive/c/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/software/NiosIICountLeadingOnesCustomInstruction/NiosIICountLeadingOnesCustomInstruction.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 22:53:08.283
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 22:53:09.069
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x89030 --id=0x0 --timestamp=1785879213]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 22:53:11.324
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x89030 --id=0x0 --timestamp=1785879213 /cygdrive/c/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/software/NiosIICountLeadingOnesCustomInstruction/NiosIICountLeadingOnesCustomInstruction.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 22:56:03.647
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 22:56:04.446
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x89030 --id=0x0 --timestamp=1785879213]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 22:56:06.703
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x89030 --id=0x0 --timestamp=1785879213 /cygdrive/c/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/software/NiosIICountLeadingOnes/NiosIICountLeadingOnes.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 22:57:29.698
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 22:57:30.479
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x89030 --id=0x0 --timestamp=1785879213]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2026-08-04 22:57:32.698
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x89030 --id=0x0 --timestamp=1785879213 /cygdrive/c/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/software/NiosIICountLeadingOnes/NiosIICountLeadingOnes.elf]

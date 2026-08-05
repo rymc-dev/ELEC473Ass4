@@ -1,5 +1,19 @@
 \begin{thebibliography}{1}
 
+\bibitem{qsys}
+{Intel Corporation}.
+\newblock Intel quartus prime pro edition user guide: Platform designer.
+\newblock
+  \url{https://cdrdv2-public.intel.com/704996/ug-qpp-platform-designer-19-1-683609-704996.pdf},
+  2026.
+\newblock Accessed: 2026-08-04. Platform Designer was formerly named Qsys.
+
+\bibitem{altera}
+{Wikipedia contributors}.
+\newblock Altera.
+\newblock \url{https://en.wikipedia.org/wiki/Altera}, 2026.
+\newblock Accessed: 2026-08-04.
+
 \bibitem{nios_ii}
 {Wikipedia contributors}.
 \newblock Nios ii.

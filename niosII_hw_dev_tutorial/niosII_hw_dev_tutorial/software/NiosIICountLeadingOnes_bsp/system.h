@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
  * SOPC Builder design path: C:/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/first_nios2_system.sopcinfo
  *
- * Generated: Tue Aug 04 21:25:56 BST 2026
+ * Generated: Tue Aug 04 22:55:36 BST 2026
  */
 
 /*
@@ -119,6 +119,15 @@
 
 
 /*
+ * Custom instruction macros
+ *
+ */
+
+#define ALT_CI_COUNT_LEADING_ONES_0(A,B) __builtin_custom_inii(ALT_CI_COUNT_LEADING_ONES_0_N,(A),(B))
+#define ALT_CI_COUNT_LEADING_ONES_0_N 0x0
+
+
+/*
  * Define for each module class mastered by the CPU
  *
  */
@@ -131,6 +140,7 @@
 #define __ALTERA_AVALON_TIMER
 #define __ALTERA_NIOS2_QSYS
 #define __ALTERA_UP_AVALON_SRAM
+#define __COUNT_LEADING_ONES
 
 
 /*
@@ -344,7 +354,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1785874508
+#define SYSID_TIMESTAMP 1785879213
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

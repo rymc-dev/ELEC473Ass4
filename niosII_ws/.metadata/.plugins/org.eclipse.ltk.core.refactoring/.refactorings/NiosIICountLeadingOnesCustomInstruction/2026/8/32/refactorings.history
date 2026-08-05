@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;NiosIICountLeadingOnesCustomInstruction/count_binary.c&apos; to &apos;count_leading_ones.c&apos;" description="Rename resource &apos;count_binary.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="count_binary.c" name="count_leading_ones.c" stamp="1785880354624" updateReferences="true"/>
+</session>

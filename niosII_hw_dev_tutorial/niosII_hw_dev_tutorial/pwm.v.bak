@@ -1,0 +1,85 @@
+// -------------------------------
+// Module        : pwm
+// Description : Pulse Width Modulator.
+//                      Modulates voltage via pulse 
+//                      width frequency changes. 
+// 
+// Author        : Ryan McKee
+// Created        : 27/07/2026
+//
+// Parameters:
+//    PWM_CLK_DIV         - default CPU cycles per PWM check
+//        PWM_RESOLUTION     - default Pulse width resolution 
+//        DEFAULT_DUTY_REG     - duty cycle a key param of PWM. 
+//
+// Inputs: 
+//    clk       - system clock
+//    rst_n     - active-low asynchronous reset
+//    wr_en     - write enable; loads data_in into duty_reg on next posedge
+//    data_in   - new duty cycle value, written by MIPS core
+//
+// Outputs: 
+//    pwm_out   - modulated output, drives LED
+//    
+// Notes:
+//        - assumes parameter values based on 
+//          DE2 LED. 
+//     - may want to update based on output load.
+
+module pwm #(
+    parameter 			PWM_CLK_DIV             = 194,
+    parameter 			PWM_RESOLUTION          = 254,
+    parameter [7:0] 	DEFAULT_DUTY_REG  = 8'h02
+)(
+    input        		clk,
+    input        		rst_n,
+    input        		wr_en,
+    input [31:0]  	data_in,
+    output reg   		pwm_out
+);
+
+    reg [7:0] duty_reg;
+    reg [7:0] pwm_counter;
+    reg [7:0] divider;
+
+    // Next-state values computed one cycle ahead, so pwm_out registers
+    // from the SAME values used to update pwm_counter/duty_reg. This
+    // removes the delta-cycle race with anything sampling pwm_out
+    // right after pwm_counter changes.
+    reg [7:0] next_counter;
+    reg [7:0] next_duty;
+
+    always @(*) begin
+        next_duty = wr_en ? data_in[7:0] : duty_reg;
+
+        if (pwm_counter == PWM_RESOLUTION)
+            next_counter = 8'd0;
+        else if (divider == PWM_CLK_DIV)
+            next_counter = pwm_counter + 1'b1;
+        else
+            next_counter = pwm_counter;
+    end
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            pwm_counter <= 8'd0;
+            divider     <= 8'd0;
+            duty_reg    <= DEFAULT_DUTY_REG;
+            pwm_out     <= (8'd0 < DEFAULT_DUTY_REG);
+        end else begin
+            duty_reg    <= next_duty;
+            pwm_counter <= next_counter;
+
+            if (pwm_counter == PWM_RESOLUTION) begin
+                // divider deliberately untouched here, matching your original
+            end else if (divider == PWM_CLK_DIV) begin
+                divider <= 8'd0;
+            end else begin
+                divider <= divider + 1'b1;
+            end
+
+            pwm_out <= (next_counter < next_duty);
+        end
+    end
+
+endmodule

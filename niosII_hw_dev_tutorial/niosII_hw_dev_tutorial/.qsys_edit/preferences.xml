@@ -3,21 +3,21 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="143" />
+   <connections preferredWidth="30" />
    <irq preferredWidth="34" />
    <export preferredWidth="312" />
+   <name preferredWidth="286" />
   </columns>
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="542" />
-   <clocksource preferredWidth="541" />
-   <frequency preferredWidth="541" />
+   <clockname preferredWidth="474" />
+   <clocksource preferredWidth="474" />
+   <frequency preferredWidth="474" />
   </columns>
  </clocktable>
- <library
-   expandedCategories="Project/System,Library/Memories and Memory Controllers/External Memory Interfaces,Library/Memories and Memory Controllers/External Memory Interfaces/SDRAM Interfaces,Library,Library/Memories and Memory Controllers,Project" />
- <window width="1938" height="1158" x="-9" y="-9" />
+ <library expandedCategories="Project,Library" />
+ <window width="1734" height="1399" x="1713" y="0" />
  <hdlexample language="VERILOG" />
  <generation path="_PROJECT_NAME_" />
 </preferences>

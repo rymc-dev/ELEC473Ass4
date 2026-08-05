@@ -1,0 +1,41 @@
+module count_leading_ones (
+    // Nios II custom instruction standard ports
+    clk,
+    clk_en,
+    reset,
+    dataa,
+    result
+);
+
+input        clk;
+input        clk_en;
+input        reset;
+input  [31:0] dataa;
+output [31:0] result;
+
+// Priority tree, halving each stage — pure combinational
+wire [4:0] cnt16, cnt8, cnt4, cnt2, cnt1;
+
+wire msb16_all1 = (dataa[31:16] == 16'hFFFF);
+wire [15:0] next16 = msb16_all1 ? dataa[15:0] : dataa[31:16];
+
+wire msb8_all1 = (next16[15:8] == 8'hFF);
+wire [7:0] next8 = msb8_all1 ? next16[7:0] : next16[15:8];
+
+wire msb4_all1 = (next8[7:4] == 4'hF);
+wire [3:0] next4 = msb4_all1 ? next8[3:0] : next8[7:4];
+
+wire msb2_all1 = (next4[3:2] == 2'b11);
+wire [1:0] next2 = msb2_all1 ? next4[1:0] : next4[3:2];
+
+wire msb1_all1 = next2[1];
+wire bit0 = msb1_all1 ? next2[0] : 1'b0;
+
+assign result = (msb16_all1 ? 16 : 0)
+              + (msb8_all1  ? 8  : 0)
+              + (msb4_all1  ? 4  : 0)
+              + (msb2_all1  ? 2  : 0)
+              + (msb1_all1  ? 1  : 0)
+              + (msb1_all1 & bit0 ? 1 : 0);
+
+endmodule
