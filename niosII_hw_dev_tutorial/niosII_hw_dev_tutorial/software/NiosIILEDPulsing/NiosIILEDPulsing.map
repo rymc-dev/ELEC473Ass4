@@ -1,0 +1,1027 @@
+Archive member included because of file (symbol)
+
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o)
+                              ../NiosIILEDPulsing_bsp//obj/HAL/src/crt0.o (alt_load)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+                              ../NiosIILEDPulsing_bsp//obj/HAL/src/crt0.o (alt_main)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o)
+                              obj/default/led_pulsing.o (usleep)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o) (alt_irq_init)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_avalon_jtag_uart_read_fd)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_read)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_write)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_avalon_timer_sc_init)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o) (alt_busy_sleep)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o) (close)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_dev_list)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_dev_llist_insert)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_errno.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o) (alt_errno)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o) (alt_ic_isr_register)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o) (alt_iic_isr_register)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o) (alt_io_redirect)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o) (alt_irq_entry)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o) (alt_irq_handler)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o) (alt_irq_active)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o) (open)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_release_fd.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o) (alt_release_fd)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o) (_alt_tick_rate)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_nios2_qsys_irq_init)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o) (alt_exception)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o) (alt_find_dev)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_file.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o) (alt_find_file)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_get_fd.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o) (alt_get_fd)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o) (alt_icache_flush)
+c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o) (exit)
+c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o) (errno)
+c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o) (memcmp)
+c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o) (strlen)
+c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+                              c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o) (__call_exitprocs)
+c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+                              c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o) (_global_impure_ptr)
+c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o) (__udivsi3)
+c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-mul.o)
+                              ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o) (__mulsi3)
+../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exit.o)
+                              c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o) (_exit)
+
+Allocating common symbols
+Common symbol       size              file
+
+alt_irq             0x100             ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+errno               0x4               c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+sram             0x00000000         0x00080000
+onchip_mem       0x00080000         0x00005000
+reset            0x01000000         0x00000020
+sdram            0x01000020         0x007fffe0
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ../NiosIILEDPulsing_bsp//obj/HAL/src/crt0.o
+LOAD obj/default/led_pulsing.o
+LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libstdc++.a
+LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libm.a
+LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a
+START GROUP
+LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a
+LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a
+LOAD ../NiosIILEDPulsing_bsp/\libhal_bsp.a
+END GROUP
+LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a
+                0x00000000                __alt_mem_sram = 0x0
+                0x00080000                __alt_mem_onchip_mem = 0x80000
+                0x01000000                __alt_mem_sdram = 0x1000000
+
+.entry          0x01000000       0x20
+ *(.entry)
+ .entry         0x01000000       0x20 ../NiosIILEDPulsing_bsp//obj/HAL/src/crt0.o
+                0x01000000                __reset
+
+.exceptions     0x01000020      0x194
+                0x01000020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
+                0x01000020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ .exceptions.entry.label
+                0x01000020        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+                0x01000020                alt_irq_entry
+ .exceptions.entry.label
+                0x01000020        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+                0x01000020                alt_exception
+ *(.exceptions.entry.user)
+ *(.exceptions.entry)
+ .exceptions.entry
+                0x01000020       0x54 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ .exceptions.irqtest
+                0x01000074       0x10 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ .exceptions.irqhandler
+                0x01000084        0x4 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ .exceptions.irqreturn
+                0x01000088        0x4 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.label)
+ .exceptions.notirq.label
+                0x0100008c        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ .exceptions.notirq
+                0x0100008c        0x8 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ .exceptions.unknown
+                0x01000094        0x4 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.label)
+ .exceptions.exit.label
+                0x01000098        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .exceptions.exit.label
+                0x01000098        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ .exceptions.exit
+                0x01000098       0x54 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions)
+ .exceptions    0x010000ec       0xc8 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x010000ec                alt_irq_handler
+                0x010001b4                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+                0x01000020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+
+.text           0x010001b4     0x1b08
+                0x010001b4                PROVIDE (stext, ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x010001b4       0x3c ../NiosIILEDPulsing_bsp//obj/HAL/src/crt0.o
+                0x010001b4                _start
+ .text          0x010001f0       0x8c obj/default/led_pulsing.o
+                0x010001f0                main
+ .text          0x0100027c       0xec ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o)
+                0x0100027c                alt_load
+ .text          0x01000368       0x5c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+                0x01000368                alt_main
+ .text          0x010003c4       0x30 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o)
+                0x010003c4                usleep
+ .text          0x010003f4       0xb4 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x010003f4                alt_irq_init
+                0x01000428                alt_sys_init
+ .text          0x010004a8       0xb0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                0x010004a8                altera_avalon_jtag_uart_read_fd
+                0x01000500                altera_avalon_jtag_uart_write_fd
+ .text          0x01000558      0x104 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                0x01000558                altera_avalon_jtag_uart_read
+ .text          0x0100065c       0xa4 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0100065c                altera_avalon_jtag_uart_write
+ .text          0x01000700      0x100 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+                0x01000770                alt_avalon_timer_sc_init
+ .text          0x01000800      0x15c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                0x01000800                alt_busy_sleep
+ .text          0x0100095c      0x160 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o)
+                0x0100095c                close
+ .text          0x01000abc       0x1c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x01000abc                alt_dcache_flush_all
+ .text          0x01000ad8       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+ .text          0x01000b04      0x114 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                0x01000b04                alt_dev_llist_insert
+ .text          0x01000c18        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_errno.o)
+ .text          0x01000c18       0x30 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x01000c18                alt_icache_flush_all
+ .text          0x01000c48      0x1d4 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o)
+                0x01000c48                alt_ic_isr_register
+                0x01000c98                alt_ic_irq_enable
+                0x01000d34                alt_ic_irq_disable
+                0x01000dd4                alt_ic_irq_enabled
+ .text          0x01000e1c       0xf8 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                0x01000e1c                alt_iic_isr_register
+ .text          0x01000f14      0x150 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o)
+                0x01000fec                alt_io_redirect
+ .text          0x01001064        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .text          0x01001064        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .text          0x01001064        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .text          0x01001064      0x2e4 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o)
+                0x0100115c                open
+ .text          0x01001348       0x78 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_release_fd.o)
+                0x01001348                alt_release_fd
+ .text          0x010013c0      0x1a4 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+                0x010013c0                alt_alarm_stop
+                0x01001458                alt_tick
+ .text          0x01001564       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+                0x01001564                altera_nios2_qsys_irq_init
+ .text          0x01001584        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .text          0x01001584       0x94 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o)
+                0x01001584                alt_find_dev
+ .text          0x01001618      0x120 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_file.o)
+                0x01001618                alt_find_file
+ .text          0x01001738       0xd0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_get_fd.o)
+                0x01001738                alt_get_fd
+ .text          0x01001808       0x90 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush.o)
+                0x01001808                alt_icache_flush
+ .text          0x01001898       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+                0x01001898                exit
+ .text          0x010018b8        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .text          0x010018b8       0x3c c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+                0x010018b8                memcmp
+ .text          0x010018f4       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                0x010018f4                strlen
+ .text          0x01001914      0x1c0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+                0x01001918                __call_exitprocs
+ .text          0x01001ad4        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .text          0x01001ad4      0x14c c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                0x01001b50                __divsi3
+                0x01001bb0                __modsi3
+                0x01001c10                __udivsi3
+                0x01001c18                __umodsi3
+ .text          0x01001c20       0x38 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-mul.o)
+                0x01001c20                __mulsi3
+ .text          0x01001c58       0x60 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exit.o)
+                0x01001c98                _exit
+ *(.gnu.warning.*)
+ *(.fini)
+                0x01001cb8                PROVIDE (__etext, ABSOLUTE (.))
+                0x01001cb8                PROVIDE (_etext, ABSOLUTE (.))
+                0x01001cb8                PROVIDE (etext, ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x01001cb8                . = ALIGN (0x4)
+                0x01001cb8                PROVIDE (__preinit_array_start, ABSOLUTE (.))
+ *(.preinit_array)
+                0x01001cb8                PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                0x01001cb8                PROVIDE (__init_array_start, ABSOLUTE (.))
+ *(.init_array)
+                0x01001cb8                PROVIDE (__init_array_end, ABSOLUTE (.))
+                0x01001cb8                PROVIDE (__fini_array_start, ABSOLUTE (.))
+ *(.fini_array)
+                0x01001cb8                PROVIDE (__fini_array_end, ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table)
+ *(.dynamic)
+                0x01001cb8                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+ *(.ctors)
+ *(SORT(.ctors.*))
+ .ctors.65535   0x01001cb8        0x4 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+                0x01001cbc                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x01001cbc                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+ *(.dtors)
+ *(SORT(.dtors.*))
+                0x01001cbc                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+ *(.jcr)
+                0x01001cbc                . = ALIGN (0x4)
+
+.rodata         0x01001cbc       0x2c
+                0x01001cbc                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x01001cbc                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x01001cbc       0x10 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+ .rodata        0x01001ccc       0x10 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .rodata        0x01001cdc        0xc ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+ *(.rodata1)
+                0x01001ce8                . = ALIGN (0x4)
+                0x01001ce8                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x01001cbc                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+
+.rwdata         0x01001ce8      0x2e0 load address 0x01001fc8
+                0x01001ce8                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x01001ce8                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x01001ce8        0x0 ../NiosIILEDPulsing_bsp//obj/HAL/src/crt0.o
+ .data          0x01001ce8        0x0 obj/default/led_pulsing.o
+ .data          0x01001ce8        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x01001ce8        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x01001ce8        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o)
+ .data          0x01001ce8       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x01001d14        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .data          0x01001d14        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .data          0x01001d14        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x01001d14        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .data          0x01001d14        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .data          0x01001d14        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o)
+ .data          0x01001d14        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x01001d14      0x1a8 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+                0x01001d14                alt_dev_null
+                0x01001d3c                alt_fd_list
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_errno.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_file.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .data          0x01001ebc        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .data          0x01001ebc        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .data          0x01001ebc        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .data          0x01001ebc        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .data          0x01001ebc        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .data          0x01001ebc        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .data          0x01001ebc       0xe0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .data          0x01001f9c        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .data          0x01001f9c        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .data          0x01001f9c        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exit.o)
+                0x01009f9c                _gp = ABSOLUTE ((. + 0x8000))
+                0x01009f9c                PROVIDE (gp, _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x01001f9c       0x14 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+                0x01001f9c                alt_fs_list
+                0x01001fa4                alt_dev_list
+                0x01001fac                alt_max_fd
+ .sdata         0x01001fb0        0x4 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_errno.o)
+                0x01001fb0                alt_errno
+ .sdata         0x01001fb4        0x4 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x01001fb4                alt_priority_mask
+ .sdata         0x01001fb8        0x8 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+                0x01001fb8                alt_alarm_list
+ .sdata         0x01001fc0        0x8 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+                0x01001fc0                _impure_ptr
+                0x01001fc4                _global_impure_ptr
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x01001fc8                . = ALIGN (0x4)
+                0x01001fc8                _edata = ABSOLUTE (.)
+                0x01001fc8                PROVIDE (edata, ABSOLUTE (.))
+                0x01001fc8                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x01001fc8                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+
+.bss            0x010022a8      0x11c
+                0x010022a8                __bss_start = ABSOLUTE (.)
+                0x010022a8                PROVIDE (__sbss_start, ABSOLUTE (.))
+                0x010022a8                PROVIDE (___sbss_start, ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x010022a8        0xc ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+                0x010022a8                alt_argc
+                0x010022ac                alt_argv
+                0x010022b0                alt_envp
+ .sbss          0x010022b4        0x4 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x010022b4                alt_irq_active
+ .sbss          0x010022b8        0x8 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+                0x010022b8                _alt_tick_rate
+                0x010022bc                _alt_nticks
+ .sbss          0x010022c0        0x4 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+                0x010022c0                errno
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                0x010022c4                PROVIDE (__sbss_end, ABSOLUTE (.))
+                0x010022c4                PROVIDE (___sbss_end, ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp//obj/HAL/src/crt0.o
+ .bss           0x010022c4        0x0 obj/default/led_pulsing.o
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_errno.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_file.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .bss           0x010022c4        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .bss           0x010022c4        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .bss           0x010022c4        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .bss           0x010022c4        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .bss           0x010022c4        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .bss           0x010022c4        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .bss           0x010022c4        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .bss           0x010022c4        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .bss           0x010022c4        0x0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exit.o)
+ *(COMMON)
+ COMMON         0x010022c4      0x100 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x010022c4                alt_irq
+                0x010023c4                . = ALIGN (0x4)
+                0x010023c4                __bss_end = ABSOLUTE (.)
+
+.sram           0x00000000        0x0 load address 0x010023c4
+                0x00000000                PROVIDE (_alt_partition_sram_start, ABSOLUTE (.))
+ *(.sram. sram.*)
+                0x00000000                . = ALIGN (0x4)
+                0x00000000                PROVIDE (_alt_partition_sram_end, ABSOLUTE (.))
+                0x010023c4                PROVIDE (_alt_partition_sram_load_addr, LOADADDR (.sram))
+
+.onchip_mem     0x00080000        0x0 load address 0x010023c4
+                0x00080000                PROVIDE (_alt_partition_onchip_mem_start, ABSOLUTE (.))
+ *(.onchip_mem. onchip_mem.*)
+                0x00080000                . = ALIGN (0x4)
+                0x00080000                PROVIDE (_alt_partition_onchip_mem_end, ABSOLUTE (.))
+                0x010023c4                PROVIDE (_alt_partition_onchip_mem_load_addr, LOADADDR (.onchip_mem))
+
+.sdram          0x010023c4        0x0
+                0x010023c4                PROVIDE (_alt_partition_sdram_start, ABSOLUTE (.))
+ *(.sdram. sdram.*)
+                0x010023c4                . = ALIGN (0x4)
+                0x010023c4                PROVIDE (_alt_partition_sdram_end, ABSOLUTE (.))
+                0x010023c4                _end = ABSOLUTE (.)
+                0x010023c4                end = ABSOLUTE (.)
+                0x010023c4                __alt_stack_base = ABSOLUTE (.)
+                0x010023c4                PROVIDE (_alt_partition_sdram_load_addr, LOADADDR (.sdram))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x26
+ *(.comment)
+ .comment       0x00000000       0x26 obj/default/led_pulsing.o
+                                 0x27 (size before relaxing)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_errno.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_file.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .comment       0x00000000       0x27 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .comment       0x00000000       0x27 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .comment       0x00000000       0x27 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .comment       0x00000000       0x27 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .comment       0x00000000       0x27 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .comment       0x00000000       0x27 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .comment       0x00000000       0x27 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .comment       0x00000000       0x27 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .comment       0x00000000       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x4d8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 ../NiosIILEDPulsing_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x00000028       0x20 obj/default/led_pulsing.o
+ .debug_aranges
+                0x00000048       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x00000068       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x00000088       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_aranges
+                0x000000a8       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x000000c8       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_aranges
+                0x000000e8       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_aranges
+                0x00000108       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_aranges
+                0x00000128       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_aranges
+                0x00000148       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_aranges
+                0x00000168       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_aranges
+                0x00000188       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x000001a8       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_aranges
+                0x000001c8       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_aranges
+                0x000001e8       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x00000208       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_aranges
+                0x00000228       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_aranges
+                0x00000248       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_aranges
+                0x00000268       0x30 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_aranges
+                0x00000298       0x28 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_aranges
+                0x000002c0       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_aranges
+                0x000002e0       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_aranges
+                0x00000300       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_aranges
+                0x00000320       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_aranges
+                0x00000340       0x38 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_aranges
+                0x00000378       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_aranges
+                0x00000398       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_aranges
+                0x000003b8       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_aranges
+                0x000003d8       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .debug_aranges
+                0x000003f8       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_aranges
+                0x00000418       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_aranges
+                0x00000438       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_aranges
+                0x00000458       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_aranges
+                0x00000478       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_aranges
+                0x00000498       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_aranges
+                0x000004b8       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_pubnames
+                0x00000000      0x6ef
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x1b obj/default/led_pulsing.o
+ .debug_pubnames
+                0x0000001b       0x1f ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_pubnames
+                0x0000003a       0x46 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_pubnames
+                0x00000080       0x1d ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_pubnames
+                0x0000009d       0x34 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_pubnames
+                0x000000d1       0x5b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_pubnames
+                0x0000012c       0x33 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_pubnames
+                0x0000015f       0x34 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_pubnames
+                0x00000193       0x2f ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_pubnames
+                0x000001c2       0x25 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_pubnames
+                0x000001e7       0x1c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_pubnames
+                0x00000203       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_pubnames
+                0x0000022e       0x63 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_pubnames
+                0x00000291       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_pubnames
+                0x000002bc       0x20 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_pubnames
+                0x000002dc       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_pubnames
+                0x00000307       0x6e ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_pubnames
+                0x00000375       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_pubnames
+                0x000003a0       0x26 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_pubnames
+                0x000003c6       0x32 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_pubnames
+                0x000003f8       0x3b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_pubnames
+                0x00000433       0x1b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_pubnames
+                0x0000044e       0x25 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_pubnames
+                0x00000473       0x68 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_pubnames
+                0x000004db       0x31 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_pubnames
+                0x0000050c       0x23 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_pubnames
+                0x0000052f       0x24 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_pubnames
+                0x00000553       0x21 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_pubnames
+                0x00000574       0x27 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .debug_pubnames
+                0x0000059b       0x1b c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_pubnames
+                0x000005b6       0x1c c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_pubnames
+                0x000005d2       0x1d c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_pubnames
+                0x000005ef       0x1d c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_pubnames
+                0x0000060c       0x27 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_pubnames
+                0x00000633       0x39 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_pubnames
+                0x0000066c       0x48 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_pubnames
+                0x000006b4       0x1f c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_pubnames
+                0x000006d3       0x1c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_info     0x00000000     0x7ab3
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0xa9 ../NiosIILEDPulsing_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x000000a9      0x1aa obj/default/led_pulsing.o
+ .debug_info    0x00000253      0x2bb ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000050e      0x253 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x00000761      0x196 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_info    0x000008f7      0x5ef ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x00000ee6      0x5e7 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_info    0x000014cd      0x337 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_info    0x00001804      0x314 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x00001b18      0x3b9 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_info    0x00001ed1      0x1d9 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_info    0x000020aa      0x495 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_info    0x0000253f      0x18a ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x000026c9      0x6ad ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_info    0x00002d76      0x2e5 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_info    0x0000305b      0x192 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_info    0x000031ed      0x18a ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x00003377      0x4c1 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_info    0x00003838      0x342 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x00003b7a      0x6c3 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_info    0x0000423d       0xb2 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x000042ef      0x2a3 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x00004592      0x195 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x00004727      0x553 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_info    0x00004c7a      0x420 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_info    0x0000509a      0x42c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_info    0x000054c6      0x191 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_info    0x00005657       0xb8 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x0000570f      0x446 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_info    0x00005b55      0x44d ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_info    0x00005fa2      0x48e ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_info    0x00006430      0x1d2 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .debug_info    0x00006602       0x9f c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_info    0x000066a1       0x8c c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_info    0x0000672d       0xef c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_info    0x0000681c       0xc2 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_info    0x000068de      0x6d5 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_info    0x00006fb3      0x636 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_info    0x000075e9      0x21c c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_info    0x00007805       0xf3 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_info    0x000078f8      0x1bb ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_abbrev   0x00000000     0x1c44
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x12 ../NiosIILEDPulsing_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x00000012       0x5d obj/default/led_pulsing.o
+ .debug_abbrev  0x0000006f       0x88 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x000000f7       0xb7 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x000001ae       0x5d ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_abbrev  0x0000020b      0x121 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x0000032c       0xcb ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_abbrev  0x000003f7       0xb6 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_abbrev  0x000004ad       0xb4 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x00000561      0x137 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_abbrev  0x00000698       0x6c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_abbrev  0x00000704       0xfb ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_abbrev  0x000007ff       0x3f ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000083e       0xc7 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_abbrev  0x00000905       0xf6 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_abbrev  0x000009fb       0x5e ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_abbrev  0x00000a59       0x3f ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x00000a98      0x134 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_abbrev  0x00000bcc      0x14e ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_abbrev  0x00000d1a       0xf0 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_abbrev  0x00000e0a       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x00000e1c      0x10c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x00000f28       0x44 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x00000f6c      0x112 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_abbrev  0x0000107e       0xc1 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_abbrev  0x0000113f      0x150 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_abbrev  0x0000128f       0x3f ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_abbrev  0x000012ce       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x000012e0       0xcf ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_abbrev  0x000013af       0xcf ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_abbrev  0x0000147e       0xfb ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_abbrev  0x00001579       0x7a ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .debug_abbrev  0x000015f3       0x4e c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_abbrev  0x00001641       0x3b c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_abbrev  0x0000167c       0x7c c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x000016f8       0x7a c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_abbrev  0x00001772      0x1c6 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x00001938      0x13f c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_abbrev  0x00001a77       0xe0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x00001b57       0x7b c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_abbrev  0x00001bd2       0x72 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_line     0x00000000     0x56f4
+ *(.debug_line)
+ .debug_line    0x00000000       0x6c ../NiosIILEDPulsing_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x0000006c      0x1f8 obj/default/led_pulsing.o
+ .debug_line    0x00000264      0x217 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x0000047b      0x2ba ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000735      0x202 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_line    0x00000937      0x2c7 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000bfe      0x1d7 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_line    0x00000dd5      0x343 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_line    0x00001118      0x304 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x0000141c      0x2b3 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_line    0x000016cf      0x25c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_line    0x0000192b      0x299 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_line    0x00001bc4      0x1b5 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x00001d79      0x254 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_line    0x00001fcd      0x25a ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_line    0x00002227      0x1aa ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_line    0x000023d1      0x1bd ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000258e      0x2c8 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_line    0x00002856      0x249 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x00002a9f      0x2b4 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_line    0x00002d53       0x6b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x00002dbe      0x248 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x00003006       0x72 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x00003078      0x2ff ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_line    0x00003377       0xed ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_line    0x00003464      0x2dc ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_line    0x00003740      0x1ce ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_line    0x0000390e       0xab ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x000039b9      0x26b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_line    0x00003c24      0x27c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_line    0x00003ea0      0x297 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_line    0x00004137      0x1f9 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .debug_line    0x00004330      0x223 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_line    0x00004553      0x1e2 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_line    0x00004735      0x270 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_line    0x000049a5      0x250 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_line    0x00004bf5      0x360 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_line    0x00004f55      0x230 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_line    0x00005185      0x24f c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_line    0x000053d4      0x11a c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_line    0x000054ee      0x206 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_frame    0x00000000      0x7cc
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x2c obj/default/led_pulsing.o
+ .debug_frame   0x0000002c       0x48 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x00000074       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x000000a0       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_frame   0x000000cc       0x64 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x00000130       0x48 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_frame   0x00000178       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_frame   0x000001a4       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x000001d0       0x48 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_frame   0x00000218       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_frame   0x00000244       0x48 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_frame   0x0000028c       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x000002b8       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_frame   0x000002e4       0x48 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_frame   0x0000032c       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000358       0x80 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_frame   0x000003d8       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_frame   0x00000404       0x4c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_frame   0x00000450       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x0000047c       0x68 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_frame   0x000004e4       0x30 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_frame   0x00000514       0x48 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_frame   0x0000055c       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_frame   0x00000588       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_frame   0x000005b4       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_frame   0x000005e0       0x30 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_frame   0x00000610       0x2c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .debug_frame   0x0000063c       0x2c c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_frame   0x00000668       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_frame   0x00000688       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_frame   0x000006a8       0x4c c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x000006f4       0x70 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_frame   0x00000764       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_frame   0x00000784       0x48 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_str      0x00000000      0xa17
+ *(.debug_str)
+ .debug_str     0x00000000       0x12 obj/default/led_pulsing.o
+ .debug_str     0x00000012       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_str     0x00000024       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_str     0x00000036       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_str     0x00000048       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_str     0x0000005a       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_str     0x0000006c       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_str     0x0000007e       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_str     0x00000090       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_str     0x000000a2       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_str     0x000000b4       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_str     0x000000c6       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_str     0x000000d8       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_str     0x000000ea       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_str     0x000000fc       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_str     0x0000010e       0x18 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_str     0x00000126       0x1a ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_str     0x00000140       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_str     0x00000152       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_str     0x00000164       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_str     0x00000176       0x1a ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_str     0x00000190       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_str     0x000001a2       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_str     0x000001b4       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_str     0x000001c6       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_str     0x000001d8       0x12 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .debug_str     0x000001ea      0x13a c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+                                0x178 (size before relaxing)
+ .debug_str     0x00000324       0xdc c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+                                0x177 (size before relaxing)
+ .debug_str     0x00000400       0xe9 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+                                0x17e (size before relaxing)
+ .debug_str     0x000004e9       0x45 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                                0x184 (size before relaxing)
+ .debug_str     0x0000052e      0x342 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+                                0x491 (size before relaxing)
+ .debug_str     0x00000870       0x49 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+                                0x45d (size before relaxing)
+ .debug_str     0x000008b9      0x10b c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                                0x1b4 (size before relaxing)
+ .debug_str     0x000009c4       0x37 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-mul.o)
+                                0x175 (size before relaxing)
+ .debug_str     0x000009fb       0x1c ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_loc      0x00000000      0xbe6
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x2b obj/default/led_pulsing.o
+ .debug_loc     0x0000002b       0x56 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_loc     0x00000081       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_loc     0x000000ac       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_loc     0x000000d7       0x81 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x00000158       0x56 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_loc     0x000001ae       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_loc     0x000001d9       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_loc     0x00000204       0x56 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_avalon_timer_sc.o)
+ .debug_loc     0x0000025a       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_loc     0x00000285       0x56 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_loc     0x000002db       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_loc     0x00000306       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_loc     0x00000331       0x56 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_loc     0x00000387       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_loc     0x000003b2       0xac ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_loc     0x0000045e       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_loc     0x00000489       0x56 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_loc     0x000004df       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_loc     0x0000050a       0x81 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_loc     0x0000058b       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_loc     0x000005b6       0x56 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_loc     0x0000060c       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_loc     0x00000637       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_loc     0x00000662       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_loc     0x0000068d       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_loc     0x000006b8       0x2b ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_icache_flush.o)
+ .debug_loc     0x000006e3       0x3d c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-exit.o)
+ .debug_loc     0x00000720       0x70 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-memcmp.o)
+ .debug_loc     0x00000790       0x1e c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_loc     0x000007ae      0x1c1 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)
+ .debug_loc     0x0000096f      0x1d2 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_loc     0x00000b41       0x4f c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_loc     0x00000b90       0x56 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x00000000       0x50
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x00000000       0x20 ../NiosIILEDPulsing_bsp//obj/HAL/src/crt0.o
+ .debug_alt_sim_info
+                0x00000020       0x30 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                0x01800000                __alt_data_end = 0x1800000
+                0x01800000                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                0x010023c4                PROVIDE (__alt_stack_limit, __alt_stack_base)
+                0x010023c4                PROVIDE (__alt_heap_start, end)
+                0x01800000                PROVIDE (__alt_heap_limit, 0x1800000)
+OUTPUT(NiosIILEDPulsing.elf elf32-littlenios2)
+
+.debug_ranges   0x00000000       0x90
+ .debug_ranges  0x00000000       0x20 ../NiosIILEDPulsing_bsp//obj/HAL/src/crt0.o
+ .debug_ranges  0x00000020       0x28 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_ranges  0x00000048       0x30 ../NiosIILEDPulsing_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_ranges  0x00000078       0x18 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-__call_atexit.o)

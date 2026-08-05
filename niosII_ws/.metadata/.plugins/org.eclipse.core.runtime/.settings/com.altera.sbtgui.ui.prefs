@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\ryanm\\OneDrive\\Desktop\\ELEC374Ass4\\niosII_hw_dev_tutorial\\niosII_hw_dev_tutorial\\software\\NiosIICountLeadingOnesCustomInstruction
+newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\ryanm\\OneDrive\\Desktop\\ELEC374Ass4\\niosII_hw_dev_tutorial\\niosII_hw_dev_tutorial\\software\\NiosIILEDPulsing
 newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\ryanm\\OneDrive\\Desktop\\ELEC374Ass4\\niosII_hw_dev_tutorial\\niosII_hw_dev_tutorial\\first_nios2_system.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\ryanm\\OneDrive\\Desktop\\ELEC374Ass4\\niosII_hw_dev_tutorial\\niosII_hw_dev_tutorial\\software\\NiosIICountLeadingOnesCustomInstruction_bsp
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\ryanm\\OneDrive\\Desktop\\ELEC374Ass4\\niosII_hw_dev_tutorial\\niosII_hw_dev_tutorial\\software\\NiosIILEDPulsing_bsp

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="28" version="2.0">
+<workbench progressCount="29" version="2.0">
 <workbenchAdvisor/>
-<window height="1148" width="976" x="952" y="0">
+<window height="1148" maximized="true" width="976" x="995" y="-27">
 <fastViewData fastViewLocation="1024"/>
 <intro standby="true"/>
 <perspectiveBar>
@@ -9,19 +9,19 @@
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="352" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="153" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="183" y="22"/>
+<coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="97" y="22"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="141" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="80" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.cdt.make.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -30,10 +30,16 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="led_pulsing.c" partName="led_pulsing.c" path="C:/Users/ryanm/OneDrive/Desktop/ELEC374Ass4/niosII_hw_dev_tutorial/niosII_hw_dev_tutorial/software/NiosIILEDPulsing/led_pulsing.c" title="led_pulsing.c" tooltip="NiosIILEDPulsing/led_pulsing.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NiosIILEDPulsing/led_pulsing.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="1365" selectionOffset="0" selectionTopPixel="330"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -81,7 +87,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="com.altera.sbtgui.ui.cPerspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="com.altera.sbtgui.ui.cPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -225,8 +231,8 @@
 <perspective_action id="com.altera.sbtgui.ui.debugPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.ui.navigator.ProjectExplorer"/>
-<view id="org.eclipse.ui.internal.introview"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.internal.introview"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -261,7 +267,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottom" ratio="0.5807087" ratioLeft="590" ratioRight="426" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1930fb4">
+<info folder="true" part="bottom" ratio="0.40140295" ratioLeft="515" ratioRight="768" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1930fb4">
 <folder activePageID="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" appearance="2" expanded="2">
 <page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" label="Nios II Console"/>
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
@@ -284,7 +290,58 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/NiosIILEDPulsing/count_binary.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/NiosIILEDPulsing_bsp/system.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/NiosIILEDPulsing/led_pulsing.c"/>
+</editors>
+<item historyLabel="count_binary.c" index="0">
+<position info="not_deleted" x="2" y="0"/>
+</item>
+<item historyLabel="count_binary.c" index="0">
+<position info="not_deleted" x="18191" y="6"/>
+</item>
+<item historyLabel="system.h" index="1">
+<position info="not_deleted" x="4177" y="33"/>
+</item>
+<item historyLabel="count_binary.c" index="0">
+<position info="not_deleted" x="18191" y="6"/>
+</item>
+<item historyLabel="count_binary.c" index="0">
+<position info="not_deleted" x="18328" y="0"/>
+</item>
+<item historyLabel="count_binary.c" index="0">
+<position info="not_deleted" x="18245" y="0"/>
+</item>
+<item historyLabel="count_binary.c" index="0">
+<position info="not_deleted" x="18334" y="0"/>
+</item>
+<item historyLabel="count_binary.c" index="0">
+<position info="not_deleted" x="18191" y="6"/>
+</item>
+<item historyLabel="system.h" index="1">
+<position info="not_deleted" x="1576" y="0"/>
+</item>
+<item historyLabel="count_binary.c" index="0">
+<position info="not_deleted" x="18191" y="6"/>
+</item>
+<item historyLabel="count_binary.c" index="0">
+<position info="not_deleted" x="6234" y="0"/>
+</item>
+<item historyLabel="system.h" index="1">
+<position info="not_deleted" x="1576" y="0"/>
+</item>
+<item historyLabel="count_binary.c" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="led_pulsing.c" index="2">
+<position info="not_deleted" x="908" y="0"/>
+</item>
+<item active="true" historyLabel="led_pulsing.c" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -302,6 +359,15 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="led_pulsing.c" tooltip="NiosIILEDPulsing/led_pulsing.c">
+<persistable path="/NiosIILEDPulsing/led_pulsing.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="count_binary.c" tooltip="NiosIILEDPulsing/count_binary.c">
+<persistable path="/NiosIILEDPulsing/count_binary.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" tooltip="NiosIILEDPulsing_bsp/system.h">
+<persistable path="/NiosIILEDPulsing_bsp/system.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="count_leading_ones.c" tooltip="NiosIICountLeadingOnes/count_leading_ones.c">
 <persistable path="/NiosIICountLeadingOnes/count_leading_ones.c"/>
 </file>
@@ -337,9 +403,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="memtest.c" tooltip="NiosIIMemoryTesting/memtest.c">
 <persistable path="/NiosIIMemoryTesting/memtest.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="count_binary.c" tooltip="NiosIICountBinary/count_binary.c">
-<persistable path="/NiosIICountBinary/count_binary.c"/>
 </file>
 </mruList>
 </workbench>

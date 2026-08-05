@@ -30,6 +30,7 @@ module first_nios2_system_cpu_test_bench (
                                             M_wr_dst_reg,
                                             W_dst_regnum,
                                             W_iw,
+                                            W_iw_custom_n,
                                             W_iw_op,
                                             W_iw_opx,
                                             W_pcb,
@@ -67,6 +68,7 @@ module first_nios2_system_cpu_test_bench (
   input            M_wr_dst_reg;
   input   [  4: 0] W_dst_regnum;
   input   [ 31: 0] W_iw;
+  input   [  7: 0] W_iw_custom_n;
   input   [  5: 0] W_iw_op;
   input   [  5: 0] W_iw_opx;
   input   [ 24: 0] W_pcb;
@@ -181,6 +183,7 @@ module first_nios2_system_cpu_test_bench (
   wire             W_op_mulxss;
   wire             W_op_mulxsu;
   wire             W_op_mulxuu;
+  wire             W_op_nci_pwm_controller_0;
   wire             W_op_nextpc;
   wire             W_op_nor;
   wire             W_op_opx;
@@ -376,7 +379,8 @@ module first_nios2_system_cpu_test_bench (
   assign W_op_rsvx56 = W_op_opx & (W_iw_opx == 56);
   assign W_op_rsvx60 = W_op_opx & (W_iw_opx == 60);
   assign W_op_rsvx63 = W_op_opx & (W_iw_opx == 63);
-  assign W_op_count_leading_ones_0 = W_op_custom & 1'b1;
+  assign W_op_count_leading_ones_0 = W_op_custom & ({W_iw_custom_n[0]} == 1'h0);
+  assign W_op_nci_pwm_controller_0 = W_op_custom & ({W_iw_custom_n[0]} == 1'h1);
   assign W_op_opx = W_iw_op == 58;
   assign W_op_custom = W_iw_op == 50;
   always @(posedge clk or negedge reset_n)

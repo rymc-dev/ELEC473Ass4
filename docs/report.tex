@@ -8,12 +8,47 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{amssymb}
+\usepackage{amsmath}
 \usepackage{tikz}
-\usetikzlibrary{automata,positioning,arrows.meta}
+\usetikzlibrary{automata,positioning,arrows.meta,shapes.geometric}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{float}
 \usepackage{hyperref}
 \hypersetup{hidelinks}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{codebg}{rgb}{0.96,0.96,0.96}
+\definecolor{codecomment}{rgb}{0.35,0.35,0.35}
+\definecolor{codekeyword}{rgb}{0.00,0.00,0.60}
+\definecolor{codestring}{rgb}{0.60,0.00,0.00}
+
+\lstdefinelanguage{verilog}{
+    morekeywords={module,endmodule,input,output,reg,wire,always,assign,begin,end,
+        posedge,negedge,if,else,case,endcase,default,parameter,localparam,
+        function,endfunction,or,initial},
+    morecomment=[l]{//},
+    morestring=[b]"
+}
+
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    backgroundcolor=\color{codebg},
+    commentstyle=\color{codecomment}\itshape,
+    keywordstyle=\color{codekeyword}\bfseries,
+    stringstyle=\color{codestring},
+    breaklines=true,
+    breakatwhitespace=false,
+    columns=flexible,
+    frame=single,
+    rulecolor=\color{black!30},
+    tabsize=4,
+    showstringspaces=false,
+    xleftmargin=1em,
+    framexleftmargin=0.8em,
+    captionpos=b
+}
 
 \title{ELEC473 Assignment 4 - Synthesising the NIOS II Processor}
 \date{\today}
@@ -36,6 +71,7 @@ performance is measured against an equivalent C software routine, with the hardw
 found to be approximately 8$\times$ faster on average.
 \end{abstract}
 
+\tableofcontents
 
 \chapter{Introduction}
 
@@ -83,22 +119,93 @@ intensity of LEDR10.
 
 The base system is built in Qsys/Platform Designer around the Nios~II processor, with 20~KB of
 on-chip memory, a JTAG UART for the console, an interval timer, an 8-bit parallel I/O peripheral
-(\texttt{led\_pio}), and a System ID peripheral. The board's SRAM and SDRAM controllers are added
-and wired onto the same Avalon Memory-Mapped interconnect as separate memory-mapped slaves,
-addressable from the Nios~II data master. Figure~\ref{fig:qsys-system} shows the resulting system
-contents, including the base addresses assigned to each component by the Qsys address map (the
-custom instruction slave added in Part~B, \texttt{count\_leading\_ones}, is also visible at the
-bottom of the table).
+(\texttt{led\_pio}), and a System ID peripheral, following a top-down design flow: the processor
+and its minimal support peripherals were brought up and verified first, and the SRAM, SDRAM, and
+(in later parts) the custom hardware were each added and re-verified as separate, self-contained
+increments on top of that working base. The board's SRAM and SDRAM controllers are added and wired
+onto the same Avalon Memory-Mapped interconnect as separate memory-mapped slaves, addressable from
+the Nios~II data master. Figure~\ref{fig:bdf-parta} shows the resulting top-level Quartus block
+diagram (BDF), instantiating the generated Qsys system against the DE2 board's physical SRAM,
+SDRAM and LED pins.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{assets/PartB/Nios_Custom_Instruction_Slave.png}
-    \caption{Qsys/Platform Designer system contents, showing the Nios~II processor, on-chip
-    memory, JTAG UART, interval timer, System ID, parallel I/O, SRAM and SDRAM controllers, and
-    the \texttt{count\_leading\_ones} custom instruction slave added in Part~B, together with
-    their assigned Avalon base/end addresses.}
+    \includegraphics[width=1\textwidth]{assets/PartA/NIOSII-Block-Diagram.png}
+    \caption{Top-level Quartus block diagram (.bdf) for the Part~A system. The Qsys-generated
+    \texttt{first\_nios2\_system} symbol is instantiated once and wired directly to the board-level
+    pins: the SRAM data/address/control bus (\texttt{SRAM\_*}), the SDRAM bus (\texttt{DRAM\_*})
+    together with its dedicated \texttt{sdram\_clk} output pin, and the 8-bit \texttt{LEDG}
+    parallel I/O export.}
+    \label{fig:bdf-parta}
+\end{figure}
+
+The board's default 50~MHz oscillator is distributed to the system through a \texttt{clocks}
+(DE-series board peripheral clock) component, which also derives a second, phase-advanced
+\texttt{sdram\_clk} output (visible as a separate Clock Output in Figure~\ref{fig:qsys-system})
+that drives the external \texttt{DRAM\_CLK} pin ahead of the internal system clock, following the
+assignment brief's guidance to advance the SDRAM clock by approximately 3~ns relative to the
+system clock using a PLL. This phase advance compensates for the round-trip propagation delay to
+and from the external SDRAM chip, so that the address, data and command signals are correctly set
+up and held at the SDRAM device's own clock edge rather than the FPGA's internal edge.
+
+Figure~\ref{fig:qsys-system} shows the full Qsys/Platform Designer system contents for the
+completed design, including the base addresses assigned to each component by the Qsys address map.
+This single system is shared across all three parts of the assignment: the SRAM and SDRAM
+controllers from Part~A are visible alongside the \texttt{count\_leading\_ones} custom instruction
+slave added in Part~B (opcode~0) and the \texttt{pwm} peripheral and \texttt{nci\_pwm\_controller}
+custom instruction added in Part~C (opcode~1), described in the following chapters.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{assets/nios2_system component tree.png}
+    \caption{Qsys/Platform Designer system contents for the completed system, showing the Nios~II
+    processor, on-chip memory, JTAG UART, interval timer, System ID, parallel I/O, SRAM and SDRAM
+    controllers (Part~A), the \texttt{count\_leading\_ones} custom instruction slave (Part~B,
+    opcode~0), and the \texttt{pwm} peripheral with its \texttt{nci\_pwm\_controller} custom
+    instruction (Part~C, opcode~1), together with their assigned Avalon base/end addresses.}
     \label{fig:qsys-system}
 \end{figure}
+
+Table~\ref{tab:full-memmap} transcribes the Avalon Memory-Mapped address map from
+Figure~\ref{fig:qsys-system} into a full system memory map, and Table~\ref{tab:opcodes} lists the
+two custom instructions separately, since they are addressed by opcode rather than by memory
+address.
+
+\begin{table}[H]
+    \centering
+    \caption{Complete Avalon Memory-Mapped peripheral address map for the final system (Parts
+    A--C), as generated by Qsys/Platform Designer.}
+    \label{tab:full-memmap}
+    \begin{tabular}{lcc}
+        \toprule
+        Component & Base Address & End Address \\
+        \midrule
+        SRAM (\texttt{sram.avalon\_sram\_slave})      & 0x0000\_0000 & 0x0007\_FFFF \\
+        On-chip memory (\texttt{onchip\_mem}, 20~KB)  & 0x0008\_0000 & 0x0008\_4FFF \\
+        PWM peripheral (\texttt{pwm.avalon\_slave\_0}) & 0x0008\_8000 & 0x0008\_8003 \\
+        CPU JTAG debug module                          & 0x0008\_8800 & 0x0008\_8FFF \\
+        Interval timer (\texttt{sys\_clk\_timer})      & 0x0008\_9000 & 0x0008\_901F \\
+        LED parallel I/O (\texttt{led\_pio})            & 0x0008\_9020 & 0x0008\_902F \\
+        System ID (\texttt{sysid})                      & 0x0008\_9030 & 0x0008\_9037 \\
+        JTAG UART (\texttt{jtag\_uart})                 & 0x0008\_9038 & 0x0008\_903F \\
+        SDRAM (\texttt{sdram.s1})                        & 0x0100\_0000 & 0x017F\_FFFF \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Custom instruction opcode assignments (opcode-addressed, not memory-mapped).}
+    \label{tab:opcodes}
+    \begin{tabular}{lcc}
+        \toprule
+        Custom instruction & Opcode & Type \\
+        \midrule
+        \texttt{count\_leading\_ones\_0} (Part~B) & 0 & Combinational \\
+        \texttt{nci\_pwm\_controller\_0} (Part~C)  & 1 & Extended \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 To exercise both memories, the Nios~II IDE memory test example program was flashed and run twice:
 once with the test program itself (\texttt{.text}, \texttt{.rodata}, \texttt{.rwdata}, heap and
@@ -112,7 +219,7 @@ the test would corrupt itself and hang or fail.
 Table~\ref{tab:mem-regions} lists the address regions tested for each memory device, taken from
 the Qsys-assigned base addresses shown in Figure~\ref{fig:qsys-system}.
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \caption{Memory testing address regions}
     \label{tab:mem-regions}
@@ -127,98 +234,61 @@ the Qsys-assigned base addresses shown in Figure~\ref{fig:qsys-system}.
 \end{table}
 
 \subsection{SRAM Test}
-\begin{verbatim}
-    
 
-             <---->   Nios II Memory Test.   <---->
-Name: Ryan McKee   ID: 201954749
-This software example tests the memory in your system to assure it
-is working properly.  This test is destructive to the contents of
-the memory it tests. Assure the memory being tested does not contain
-the executable or data sections of this code or the exception address
-of the system.
+Because the memory test is destructive, the executable running the test could not itself reside in
+the region under test. This was controlled at the Qsys/Platform Designer level by setting the
+Nios~II Processor's \emph{Reset Vector} and \emph{Exception Vector} memory
+(Figure~\ref{fig:cpu-reset-sdram}): to test SRAM, the reset/exception vector memory was set to
+\texttt{sdram.s1}, so the whole program (\texttt{.text}, \texttt{.rodata}, \texttt{.rwdata}, heap
+and stack) was linked into SDRAM by the BSP's default (auto) linker section placement, leaving the
+full 512~KB SRAM region free for the destructive test. Figure~\ref{fig:sram-test} shows the
+resulting test, run over the full SRAM range from \texttt{0x0000000} to \texttt{0x007FFFF}, with
+the modified example printing the author's name and student ID on start-up as required by the
+assignment brief.
 
-
-----------------------------------
-      Memory Test Main Menu
-----------------------------------
-     a:  Test RAM
-     b:  Test Flash
-     q:  Exit
-----------------------------------
-
-Select Choice (a-b): [Followed by <enter>]
- -ERROR: 
- is an invalid entry.  Please try again
-
-Press enter to continue...
-
-
-----------------------------------
-      Memory Test Main Menu
-----------------------------------
-     a:  Test RAM
-     b:  Test Flash
-     q:  Exit
-----------------------------------
-
-Select Choice (a-b): [Followed by <enter>]
-A
-Base address to start memory test: (i.e. 0x800000)
->
-0x0000000
-End Address:
->
-0x007FFFF
-\end{verbatim}
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{assets/PartA/sram/SRAM-Memory-Test.png}
+    \caption{Nios~II IDE Memory Test utility testing the full 512~KB SRAM region
+    (\texttt{0x0000000}--\texttt{0x007FFFF}), with the test program itself executing from SDRAM.
+    All sub-tests (data bus, address bus, byte/half-word access, and per-bit) pass.}
+    \label{fig:sram-test}
+\end{figure}
 
 \subsection{SDRAM Test}
 
-To test SDRAM, the BSP linker section settings (\texttt{linker.x}/\texttt{settings.bsp}) were
-edited to relocate the \texttt{.text}, \texttt{.rodata}, \texttt{.rwdata}, heap and stack sections
-from SDRAM to SRAM, keeping SDRAM entirely free for destructive testing. Without this change the
-running program's own code/data was overwritten mid-test, causing the test to hang or fail.
+To test SDRAM, the same mechanism was used in reverse: the Nios~II Processor's reset/exception
+vector memory was set to \texttt{sram.avalon\_sram\_slave} (Figure~\ref{fig:cpu-reset-sram}), so
+the program built entirely into SRAM, leaving SDRAM entirely free for the destructive test.
+Without this step in either direction, the running program's own code and data would have been
+overwritten mid-test, causing the test to hang or corrupt itself.
 
-\begin{verbatim}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{assets/PartA/sram/NIOSII-cpu-sdram-cfg.png}
+    \caption{Nios~II Processor component configuration used when testing SDRAM: the reset and
+    exception vector memory is set to \texttt{sram.avalon\_sram\_slave} (offset
+    \texttt{0x00000000}), placing the whole program in SRAM.}
+    \label{fig:cpu-reset-sram}
+\end{figure}
 
-             <---->   Nios II Memory Test.   <---->
-Name: Ryan McKee
-Student ID: 201954749
-This software example tests the memory in your system to assure it
-is working properly.  This test is destructive to the contents of
-the memory it tests. Assure the memory being tested does not contain
-the executable or data sections of this code or the exception address
-of the system.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{assets/PartA/sdram/niosII-cpu-cfg-sdram.png}
+    \caption{Nios~II Processor component configuration used when testing SRAM: the reset and
+    exception vector memory is set to \texttt{sdram.s1} (offset \texttt{0x01000000}), placing the
+    whole program in SDRAM.}
+    \label{fig:cpu-reset-sdram}
+\end{figure}
 
-
-----------------------------------
-      Memory Test Main Menu
-----------------------------------
-     a:  Test RAM
-     b:  Test Flash
-     q:  Exit
-----------------------------------
-
-Select Choice (a-b): [Followed by <enter>]
-a
-Base address to start memory test: (i.e. 0x800000)
->
-0x1000000
-End Address:
->
-0x17FFFFF
-
-Testing RAM from 0x1000000 to 0x17FFFFF
- -Data bus test passed
- -Address bus test passed
- -Byte and half-word access test passed
- -Testing each bit in memory device. . .  passed
-Memory at 0x1000000 Okay
-
-Press enter to continue...
-
-\end{verbatim}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{assets/PartA/sdram/sdram-test.png}
+    \caption{Nios~II IDE Memory Test utility testing the full 8~MB SDRAM region
+    (\texttt{0x1000000}--\texttt{0x17FFFFF}), with the test program itself executing from SRAM.
+    All sub-tests pass, and the memory reports Okay.}
+    \label{fig:sdram-test}
+\end{figure}
 
 \chapter{Part B - Custom Instruction}
 
@@ -237,7 +307,7 @@ counter, and the machine then remains in $S_2$ (absorbing any remaining bits wit
 effect) since the leading-ones run is over. Figure~\ref{fig:fsm} shows the resulting state
 diagram.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \begin{tikzpicture}[shorten >=1pt, node distance=4.2cm, on grid, auto, thick,
             every state/.style={minimum size=1.5cm}]
@@ -269,7 +339,7 @@ Formally, the machine is the 6-tuple $M = (Q, \Sigma, \Gamma, \delta, \omega, q_
           \texttt{count++} on $\delta(S_1, 1)$, and no output (count held) otherwise.
 \end{itemize}
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \caption{State transition function $\delta$}
     \label{tab:fsm-delta}
@@ -303,21 +373,7 @@ implements the bit-serial algorithm from Figure~\ref{fig:fsm} directly: it walks
 100{,}000 pseudo-varied input words and reports the average execution time per call using the
 standard C \texttt{clock()} API.
 
-\begin{verbatim}
-      /*
- * Count Leading Ones
- *
- * This example prints 'Hello from Nios II' to the STDOUT stream, then
- * counts the number of leading '1' bits (from the MSB) in a fixed test
- * word and prints the result. It runs on the Nios II 'standard',
- * 'full_featured', 'fast', and 'low_cost' example designs. It runs with
- * or without the MicroC/OS-II RTOS and requires a STDOUT device in your
- * system's hardware.
- *
- * Define PERFORMANCE_TEST below to instead run the counting algorithm
- * repeatedly and report its average execution time (measured with the
- * standard C clock() API) rather than a single result.
- */
+\begin{lstlisting}[language=C]
 #include <stdio.h>
 #include <stdint.h>
 /* #define PERFORMANCE_TEST */
@@ -402,8 +458,7 @@ int main()
 #endif
 	return 0;
 }
-
-\end{verbatim}
+\end{lstlisting}
 
 
 \subsection{Software Performance Result}
@@ -411,13 +466,13 @@ int main()
 Running the software routine for 100{,}000 iterations on the Nios~II system gives an average
 execution time of 24.63~\textmu s per call:
 
-\begin{verbatim}
+\begin{lstlisting}
 Running performance test (100000 iterations)...
 Performance test complete.
   Total time   : 2463000 us (2463 ticks)
   Avg per call : 24.63 us
   Last result  : 5
-\end{verbatim}
+\end{lstlisting}
 
 Because the loop breaks as soon as the first `0' bit is encountered, this cost is data-dependent:
 words with fewer leading ones return faster, while a word of all `1' bits takes the full 32
@@ -435,8 +490,8 @@ and so on down to a single bit, accumulating the count as each stage resolves. T
 mirrors $\delta(S_1, 1)$ (stay in $S_1$, increment count) versus $\delta(S_1, 0)$ (move to $S_2$,
 stop counting) from the FSM, but evaluates all bit positions in parallel instead of serially.
 
-\begin{verbatim}
-      module count_leading_ones (
+\begin{lstlisting}[language=verilog]
+module count_leading_ones (
     // Nios II custom instruction slave interface
     // "ncs_" prefix lets Platform Designer auto-recognize these as the
     // Nios II custom instruction slave interface (clk, clk_en, reset,
@@ -454,8 +509,7 @@ input         ncs_reset;
 input  [31:0] ncs_dataa;
 output [31:0] ncs_result;
 
-// Priority tree, halving each stage — pure combinational.
-// Counts leading '1' bits from the MSB of ncs_dataa.
+// Priority tree, halving each stage - pure combinational.
 
 wire msb16_all1 = (ncs_dataa[31:16] == 16'hFFFF);
 wire [15:0] next16 = msb16_all1 ? ncs_dataa[15:0] : ncs_dataa[31:16];
@@ -480,15 +534,24 @@ assign ncs_result = (msb16_all1 ? 16 : 0)
                    + (msb1_all1 & bit0 ? 1 : 0);
 
 endmodule
-\end{verbatim}
+\end{lstlisting}
 
 Once the Verilog above was synthesised, it was imported into Qsys as a Nios~II custom instruction
 component (the \texttt{ncs\_*} port prefix lets Platform Designer auto-detect it as a custom
 instruction slave rather than a generic Avalon-MM slave) and connected to the Nios~II core's
-\texttt{custom\_instruction\_master} interface, as shown at the bottom of
-Figure~\ref{fig:qsys-system} (\texttt{count\_leading\_ones\_0}, opcode~0). This exposes the
-circuit in software as the GCC built-in \texttt{\_\_builtin\_custom\_ini(...)} custom instruction
-call, which the Nios~II compiles down to a single \texttt{custom} instruction.
+\texttt{custom\_instruction\_master} interface, as shown in Figure~\ref{fig:ci-slave}
+(\texttt{count\_leading\_ones\_0}, opcode~0). This exposes the circuit in software as the GCC
+built-in \texttt{\_\_builtin\_custom\_ini(...)} custom instruction call, which the Nios~II compiles
+down to a single \texttt{custom} instruction.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{assets/PartB/Nios_Custom_Instruction_Slave.png}
+    \caption{\texttt{count\_leading\_ones\_0} connected as a Custom Instruction Slave on the
+    Nios~II core's \texttt{custom\_instruction\_master} interface, assigned opcode~0 by
+    Platform Designer.}
+    \label{fig:ci-slave}
+\end{figure}
 
 \subsection{Hardware Performance Result}
 
@@ -496,13 +559,13 @@ Running the equivalent test with the leading-ones count performed by the custom 
 instead of the C loop, for the same 100{,}000 iterations, gives an average execution time of
 3.03~\textmu s per call:
 
-\begin{verbatim}
+\begin{lstlisting}
 Running performance test (100000 iterations)...
 Performance test complete.
 Total time   : 303000 us (303 ticks)
 Avg per call : 3.03 us
 Last result  : 5
-\end{verbatim}
+\end{lstlisting}
 
 Unlike the software loop, this cost is constant regardless of the input word, since the
 combinational priority-encoder tree resolves every bit position in the same clock cycle no matter
@@ -510,7 +573,7 @@ how many leading ones are present.
 
 \section{Comparison}
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \caption{Software vs.\ hardware leading-ones count, 100{,}000 iterations}
     \label{tab:sw-vs-hw}
@@ -532,13 +595,13 @@ combinationally in a single cycle, with the remaining measured time in both case
 fixed overhead of the function/instruction call, loop bookkeeping in the benchmark harness, and
 \texttt{clock()} itself.
 
-\textbf{Software routine} -- pros: no additional FPGA logic resources are consumed, it is portable
+\textbf{Software routine} - pros: no additional FPGA logic resources are consumed, it is portable
 to any Nios~II configuration (or indeed any target) without hardware changes, and it is trivial to
 modify or debug. Cons: execution time is both slower and data-dependent (worst-case 32 iterations
 for an all-ones word), and it consumes instruction-fetch and data-path bandwidth on the processor
 for every iteration of the loop.
 
-\textbf{Hardware custom instruction} -- pros: constant, single-cycle latency regardless of input
+\textbf{Hardware custom instruction} - pros: constant, single-cycle latency regardless of input
 value, and it frees the processor from executing a software loop at all. Cons: it consumes FPGA
 logic resources (comparators and multiplexers for the priority-encoder tree), occupies one of a
 limited number of custom instruction opcode slots, requires the Qsys system to be regenerated and
@@ -554,9 +617,468 @@ that could otherwise be used elsewhere in the design.
 
 \chapter{Part C - PWM Module}
 
+For Part~C, PWM is used to gradually vary the intensity of LEDR10 from off to fully on and back to
+off, repeating continuously, as required by the assignment brief. Two hardware modules are used
+together: \texttt{pwm}, an Avalon-MM slave peripheral that generates the actual PWM waveform from
+an 8-bit duty register, and \texttt{ci\_pwm\_controller}, a Nios~II custom instruction that lets
+software set the LED brightness using a simple 0-9 level rather than a raw 8-bit duty value.
+
+\section{Design}
+
+The assignment brief suggests two ways to implement the PWM generator: the simplest is to expose
+the duty register as a plain Qsys GPIO component and build the counter and comparator as
+free-standing logic outside Qsys, wiring the GPIO's parallel output into it by hand at the BDF
+level; the more elegant alternative is to package the register, counter and comparator together as
+a single custom Avalon-MM slave component inside Qsys. The GPIO route was rejected here because it
+splits one logical peripheral across two design domains - a Qsys-managed register and a
+hand-wired BDF block - doubling the places a clocking or reset mistake could be introduced, and
+because it exposes the raw duty register directly on the Avalon bus with no scope to add
+Avalon-native handshaking (e.g.\ the write-strobe re-timing described below) without leaving Qsys
+entirely. The single-component approach was chosen instead: it keeps the counter and comparator
+under the same reset domain and clock as the register that drives them, lets Qsys's own
+address/interrupt allocation manage the peripheral like any other memory-mapped device, and, as
+Section~\ref{sec:custom-instr-hw} shows, made it straightforward to later add a second, custom
+instruction front-end (\texttt{ci\_pwm\_controller}) onto the same underlying \texttt{pwm} block
+without touching its internal register/counter/comparator logic.
+
+The core PWM design - a duty register, an up-counter, and a comparator between them, exactly the
+three-part structure suggested in the assignment brief - was originally developed as a standalone
+module in a previous assignment. For this assignment it was re-purposed as an Avalon-MM slave so
+that it could be instantiated and wired up entirely within Qsys/Platform Designer, rather than as a
+free-standing block connected by hand outside the generated system. Figure~\ref{fig:block-diagram}
+shows the module's external interface and its internal register structure, and
+Figure~\ref{fig:asm-diagram} shows the ASM chart for its controller, covering reset, the
+write-strobe path that loads a new duty value, and the two symmetric counting paths that drive
+\texttt{pwm\_out} high while the counter is below the duty value and low otherwise.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{assets/PartC/pwm_block_diagram.png}
+    \caption{\texttt{pwm} module block diagram: external interface (top) and internal register
+    structure - the duty register, PWM counter, clock divider, and registered output (bottom).}
+    \label{fig:block-diagram}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{assets/PartC/psm_asm.png}
+    \caption{ASM chart for the \texttt{pwm} module's controller, covering reset initialisation, the
+    write-strobe path (\texttt{wr\_en} loads \texttt{data\_in} into \texttt{duty\_reg}), and the
+    symmetric high/low counting paths that compare \texttt{pwm\_counter} against \texttt{duty\_reg}
+    to drive \texttt{pwm\_out}.}
+    \label{fig:asm-diagram}
+\end{figure}
+
+\section{PWM Peripheral}
+
+Making the module Avalon-MM compliant required more than just adding a register: the port names
+(\texttt{reset\_n}, \texttt{write}, \texttt{writedata}) were chosen specifically to match Avalon-MM
+naming conventions, so that Qsys Component Editor's "Analyze Synthesis Files" step auto-detects the
+clock, reset and Avalon slave interfaces without any manual signal-role assignment. The write path
+was also re-timed so that \texttt{pwm\_out} registers from the same next-state values used to
+update \texttt{pwm\_counter} and \texttt{duty\_reg}, removing a delta-cycle race that would
+otherwise exist between the counter changing and \texttt{pwm\_out} being sampled against it.
+
+\begin{lstlisting}[language=verilog]
+module pwm #(
+    parameter 			PWM_CLK_DIV             = 194,
+    parameter 			PWM_RESOLUTION          = 254,
+    parameter [7:0] 	DEFAULT_DUTY_REG  = 8'h02
+)(
+    input        		clk,
+    input        		reset_n,
+    input        		write,
+    input [31:0]  	writedata,
+    output reg   		pwm_out
+);
+    reg [7:0] duty_reg;
+    reg [7:0] pwm_counter;
+    reg [7:0] divider;
+    // Next-state values computed one cycle ahead, so pwm_out registers
+    // from the SAME values used to update pwm_counter/duty_reg. This
+    // removes the delta-cycle race with anything sampling pwm_out
+    // right after pwm_counter changes.
+    reg [7:0] next_counter;
+    reg [7:0] next_duty;
+    always @(*) begin
+        next_duty = write ? writedata[7:0] : duty_reg;
+        if (pwm_counter == PWM_RESOLUTION)
+            next_counter = 8'd0;
+        else if (divider == PWM_CLK_DIV)
+            next_counter = pwm_counter + 1'b1;
+        else
+            next_counter = pwm_counter;
+    end
+    always @(posedge clk or negedge reset_n) begin
+        if (!reset_n) begin
+            pwm_counter <= 8'd0;
+            divider     <= 8'd0;
+            duty_reg    <= DEFAULT_DUTY_REG;
+            pwm_out     <= (8'd0 < DEFAULT_DUTY_REG);
+        end else begin
+            duty_reg    <= next_duty;
+            pwm_counter <= next_counter;
+            if (pwm_counter == PWM_RESOLUTION) begin
+            end else if (divider == PWM_CLK_DIV) begin
+                divider <= 8'd0;
+            end else begin
+                divider <= divider + 1'b1;
+            end
+            pwm_out <= (next_counter < next_duty);
+        end
+    end
+endmodule
+\end{lstlisting}
+
+\section{PWM Level Custom Instruction}
+
+Driving \texttt{pwm} directly from software means every LED brightness change requires computing
+and writing an 8-bit duty value, and, since it is a plain Avalon-MM slave, requires the CPU to
+issue an ordinary store instruction to its address. To make the application code simpler, a second
+custom instruction, \texttt{ci\_pwm\_controller}, was added: it accepts a brightness \emph{level}
+from 0-9 on \texttt{ncs\_dataa}, converts it to the corresponding 8-bit duty value, and issues the
+Avalon-MM write to \texttt{pwm} itself. Because that write can take a variable number of cycles
+(the peripheral's \texttt{avm\_waitrequest} signal is not guaranteed to deassert on the very next
+cycle), this cannot be a single-cycle \emph{Combinational} custom instruction like
+\texttt{count\_leading\_ones} in Part~B; instead it is registered as an \emph{Extended} custom
+instruction, which adds explicit \texttt{ncs\_start}/\texttt{ncs\_done} handshake signals so the
+Nios~II core can stall for exactly as many cycles as the instruction needs. Figure~\ref{fig:ci-pwm-asm}
+shows the resulting two-state controller: \texttt{IDLE} waits for \texttt{ncs\_start} and then
+latches the converted duty value and asserts \texttt{avm\_write}; \texttt{WRITE} holds that write
+until \texttt{pwm} deasserts \texttt{avm\_waitrequest}, at which point \texttt{ncs\_done} pulses for
+one cycle and control returns to \texttt{IDLE}.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        state/.style={rectangle, draw, thick, minimum width=2.6cm, minimum height=1cm, align=center},
+        cond/.style={diamond, draw, thick, aspect=2.6, align=center, inner sep=2pt},
+        outbox/.style={rectangle, rounded corners=6pt, draw, thick, minimum width=4.4cm, minimum height=1.1cm, align=center},
+        >=Latex, thick,
+        node distance=1.1cm and 2.4cm
+    ]
+        \node[state] (idle) {IDLE};
+        \node[cond, below=of idle] (start) {\footnotesize ncs\_start\\= 1?};
+        \node[state, below=of start] (write) {WRITE};
+        \node[cond, below=of write] (wait) {\footnotesize avm\_wait-\\request = 0?};
+        \node[outbox, right=of start] (load) {\footnotesize avm\_write $\leftarrow$ 1\\avm\_writedata $\leftarrow$ duty};
+        \node[outbox, right=of wait] (done) {\footnotesize avm\_write $\leftarrow$ 0\\ncs\_result $\leftarrow$ duty\\ncs\_done $\leftarrow$ 1};
+
+        \draw[->] (idle) -- node[right]{\footnotesize ncs\_done $\leftarrow$ 0} (start);
+        \draw[->] (start) -- node[above]{1} (load);
+        \draw[->] (load.south) |- (write.north east);
+        \draw[->] (start) edge[loop left] node[left]{0} (start);
+        \draw[->] (write) -- (wait);
+        \draw[->] (wait) -- node[above]{1} (done);
+        \draw[->] (done.south) |- (idle.north east);
+        \draw[->] (wait) edge[loop left] node[left]{0} (wait);
+    \end{tikzpicture}
+    \caption{ASM-style state diagram for the \texttt{ci\_pwm\_controller} extended custom
+    instruction. Decisions are shown as diamonds and registered actions as boxes, mirroring the
+    Verilog \texttt{case} statement below.}
+    \label{fig:ci-pwm-asm}
+\end{figure}
+
+\begin{lstlisting}[language=verilog]
+module ci_pwm_controller #(
+    parameter [31:0] PWM_BASE_ADDR = 32'h0008_8000
+)(
+    // Standalone clock/reset ports, NOT used anywhere in the logic below.
+    // These exist purely so Platform Designer's Component Editor
+    // auto-detects a genuine Clock Input / Reset Input interface (named
+    // "clock" / "reset" once analyzed) for avalon_master_0's Associated
+    // Clock / Associated Reset dropdowns to point at - a Custom
+    // Instruction Slave's internal clk/reset don't count as a valid
+    // clock source for that association. At the system level in
+    // Qsys/Platform Designer, wire both of these to clocks_sys... same
+    // as every other component; it's the same physical clock as ncs_clk,
+    // just exposed a second way so the tool's interface bookkeeping is
+    // satisfied.
+    input              clk,
+    input              reset,
+
+    // Nios II Custom Instruction Slave Interface
+    input              ncs_clk,
+    input              ncs_clk_en,
+    input              ncs_reset,
+    input              ncs_start,
+    input      [31:0]  ncs_dataa,
+    output reg [31:0]  ncs_result,
+    output reg         ncs_done,
+    // Avalon-MM Master Interface
+    output reg [31:0]  avm_address,
+    output reg         avm_write,
+    output reg         avm_read,
+    output reg [31:0]  avm_writedata,
+    input      [31:0]  avm_readdata,
+    input              avm_waitrequest
+);
+
+    // Brightness level (0-9) -> 8-bit PWM duty value, spanning 0..254
+    // in ~28-count steps. Levels 10-15 clamp to full brightness (254)
+    // rather than producing an out-of-range or wrapped value.
+    function [7:0] level_to_duty;
+        input [3:0] level;
+        begin
+            case (level)
+                4'd0: level_to_duty = 8'd0;
+                4'd1: level_to_duty = 8'd28;
+                4'd2: level_to_duty = 8'd56;
+                4'd3: level_to_duty = 8'd85;
+                4'd4: level_to_duty = 8'd113;
+                4'd5: level_to_duty = 8'd141;
+                4'd6: level_to_duty = 8'd170;
+                4'd7: level_to_duty = 8'd198;
+                4'd8: level_to_duty = 8'd226;
+                default: level_to_duty = 8'd254; // level 9, and 10-15 clamp here too
+            endcase
+        end
+    endfunction
+
+    localparam IDLE  = 1'b0,
+               WRITE = 1'b1;
+
+    reg state;
+
+    always @(posedge ncs_clk or posedge ncs_reset) begin
+        if (ncs_reset) begin
+            state         <= IDLE;
+            ncs_done      <= 1'b0;
+            ncs_result    <= 32'd0;
+            avm_write     <= 1'b0;
+            avm_read      <= 1'b0;          // this master never reads
+            avm_address   <= PWM_BASE_ADDR; // constant, set once
+            avm_writedata <= 32'd0;
+        end else if (ncs_clk_en) begin
+            case (state)
+                IDLE: begin
+                    ncs_done <= 1'b0;
+                    if (ncs_start) begin
+                        avm_writedata <= {24'd0, level_to_duty(ncs_dataa[3:0])};
+                        avm_write     <= 1'b1;
+                        state         <= WRITE;
+                    end
+                end
+
+                WRITE: begin
+                    if (!avm_waitrequest) begin
+                        // Slave accepted the write this cycle
+                        avm_write  <= 1'b0;
+                        ncs_result <= {24'd0, level_to_duty(ncs_dataa[3:0])};
+                        ncs_done   <= 1'b1;
+                        state      <= IDLE;
+                    end
+                    // else: hold avm_write/avm_writedata steady and wait
+                end
+
+                default: state <= IDLE;
+            endcase
+        end
+    end
+
+endmodule
+\end{lstlisting}
+
+The module above interfaces to the Nios~II core as a Custom Instruction Slave on opcode~1, and
+separately drives \texttt{pwm}'s Avalon-MM slave port through its own Avalon-MM master interface,
+exactly as shown for the two custom instructions together in Table~\ref{tab:opcodes} and
+Figure~\ref{fig:qsys-system}.
+
+\section{System Integration and Pin Mapping}
+
+\texttt{pwm\_out} is exported from \texttt{pwm} as a single-bit conduit and connected, outside
+Qsys, directly to the DE2 board's \texttt{LEDR10} pin, per the LED assignment given to this student
+in the assignment brief (Table~1: Leading~1's counting, LEDR10 PWM output). Figure~\ref{fig:system-block-diagram}
+shows the completed top-level block diagram, extending the Part~A diagram
+(Figure~\ref{fig:bdf-parta}) with the \texttt{pwm\_out} export wired to pin \texttt{PIN\_AA13}
+(\texttt{LEDR10}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{assets/niosII_block_diagram.png}
+    \caption{Completed top-level block diagram: the Qsys-generated system, its SRAM/SDRAM board
+    pins from Part~A, and the \texttt{pwm\_out} conduit added in Part~C, wired to \texttt{LEDR10}
+    (\texttt{PIN\_AA13}).}
+    \label{fig:system-block-diagram}
+\end{figure}
+
+\section{Software Design}
+
+\texttt{count\_binary.c} drives the LED pulsing effect entirely in software: an unsigned
+\texttt{level} variable is ramped from \texttt{PWM\_LEVEL\_MIN} (0) up to \texttt{PWM\_LEVEL\_MAX}
+(10) and back down again, repeating forever, with each step written out through the
+\texttt{ALT\_CI\_NCI\_PWM\_CONTROLLER\_0(level, 0)} custom instruction macro generated by Qsys and
+a fixed delay between steps. This gives the simple, human-readable 0-10 brightness scale that
+\texttt{ci\_pwm\_controller} was designed to accept, rather than requiring the application to
+compute raw 8-bit duty values itself.
+
+\begin{lstlisting}[language=C]
+/******************************************************************************
+ *
+ * Description
+ * *************
+ * Pulses the LEDs up and down in brightness using the PWM custom
+ * instruction component (ALT_CI_NCI_PWM_CONTROLLER_0). The duty-cycle
+ * "level" ramps from PWM_LEVEL_MIN up to PWM_LEVEL_MAX and back down again,
+ * repeating forever, which produces a breathing/pulsing LED effect.
+ *
+ * Requirements
+ * **************
+ * This program requires a PWM controller custom instruction component
+ * named 'PWM_CONTROLLER_0' to be present in the system (see system.h for
+ * the generated ALT_CI_NCI_PWM_CONTROLLER_0(A,B) macro).
+ *
+ *****************************************************************************/
+
+#include "system.h"
+
+#include <stdbool.h>
+#include <stdint.h>
+#include <unistd.h>
+
+/* Duty-cycle range accepted by the PWM controller. */
+#define PWM_LEVEL_MIN 0
+#define PWM_LEVEL_MAX 10
+
+/* Delay between duty-cycle steps, in microseconds. */
+#define PWM_STEP_DELAY_US 200000
+
+int main()
+{
+	uint32_t level = PWM_LEVEL_MIN;
+	bool increment = true;
+
+	while (true)
+	{
+		ALT_CI_NCI_PWM_CONTROLLER_0(level, 0);
+
+		if (increment)
+		{
+			if (level == PWM_LEVEL_MAX)
+				increment = false;
+			else
+				level++;
+		}
+		else
+		{
+			if (level == PWM_LEVEL_MIN)
+				increment = true;
+			else
+				level--;
+		}
+
+		usleep(PWM_STEP_DELAY_US);
+	}
+
+	return 0;
+}
+\end{lstlisting}
+
+\section{Testing and Results}
+
+With \texttt{PWM\_CLK\_DIV}~=~194 and \texttt{PWM\_RESOLUTION}~=~254, one full PWM period is
+$195 \times 255 = 49{,}725$ system clock cycles. At the DE2's 50~MHz system clock, this gives a PWM
+switching frequency of approximately
+\[
+    f_{\text{PWM}} = \frac{50\times10^{6}\text{ Hz}}{49{,}725} \approx 1.01\text{ kHz},
+\]
+comfortably above the flicker-fusion threshold of the human eye ($\sim$50--60~Hz), so the LED
+brightness appears steady at each level rather than visibly flickering. Table~\ref{tab:level-duty}
+lists the level-to-duty mapping implemented in \texttt{ci\_pwm\_controller}. On the software side,
+each of the 10 up/down steps is held for \texttt{PWM\_STEP\_DELAY\_US}~=~200~ms, giving a full
+off~$\rightarrow$~on~$\rightarrow$~off breathing cycle of $2 \times 10 \times 0.2\text{ s} = 4$
+seconds, repeating indefinitely.
+
+\begin{table}[H]
+    \centering
+    \caption{Brightness level to 8-bit PWM duty mapping implemented in \texttt{ci\_pwm\_controller}.}
+    \label{tab:level-duty}
+    \begin{tabular}{lcccccccccc}
+        \toprule
+        Level & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 (and 10) \\
+        \midrule
+        Duty & 0 & 28 & 56 & 85 & 113 & 141 & 170 & 198 & 226 & 254 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The completed system was demonstrated running on the DE2 board; a short video is available at
+\url{https://youtube.com/shorts/yChccSzzIE8}, showing LEDR10 fading smoothly from off to full
+brightness and back to off, repeating continuously, matching the behaviour required by the
+assignment brief. Part~C has no external asynchronous inputs -- the brightness level is generated
+entirely by software and both custom instruction FSMs (\texttt{count\_leading\_ones} and
+\texttt{ci\_pwm\_controller}) are clocked from \texttt{ncs\_clk}, the same clock domain as the
+Nios~II core issuing them -- so, unlike a design driven by an unsynchronised physical button or
+switch, there is no metastability or asynchronous-input hazard to account for in this part of the
+design.
+
 \chapter{Conclusions}
 
-Overall this assignment went well, I ran into some issues
+This assignment met all three learning outcomes it targeted: an ASM-based design method was used
+for both the PWM controller (Figure~\ref{fig:asm-diagram}) and the \texttt{ci\_pwm\_controller}
+custom instruction (Figure~\ref{fig:ci-pwm-asm}) (LO1); every hardware block --
+\texttt{count\_leading\_ones}, \texttt{pwm}, and \texttt{ci\_pwm\_controller} -- was implemented in
+synthesisable Verilog (LO2); and all of it was integrated into a working Nios~II SOPC system in
+Quartus/Qsys, synthesised for and run on the DE2's Cyclone~II FPGA (LO4).
+
+\section{What Worked}
+
+Part~A's dual-memory verification strategy -- swapping the Nios~II Processor's reset/exception
+vector memory between SRAM and SDRAM so the running test program never overlapped the region under
+test -- worked cleanly and both memories passed all sub-tests (data bus, address bus, byte/half-word
+access, and per-bit) over their full ranges. Part~B's custom instruction produced a correct,
+constant-time leading-ones count and measured an $\sim\!8\times$ speed-up over the equivalent C
+routine, with both implementations agreeing on every result checked. Part~C's PWM system produced
+the required smooth, repeating off--on--off breathing effect on LEDR10, confirmed on real hardware
+in the demonstration video, at a PWM switching frequency well clear of visible flicker.
+
+\section{What Didn't Work Initially}
+
+A few issues came up during development and were resolved before final testing. The memory test's
+destructive nature meant the first attempt at testing SDRAM corrupted the running program, since
+the executable itself was still linked into SDRAM; this was fixed by moving the reset/exception
+vector (and hence the BSP's default section placement) to the other memory for each test
+(Figures~\ref{fig:cpu-reset-sram} and~\ref{fig:cpu-reset-sdram}). The standalone PWM ASM design
+carried over from the previous assignment also needed rework before it could be used here: its
+ports were renamed and its write path re-timed to be recognised as a proper Avalon-MM slave by
+Qsys Component Editor, rather than remaining a free-standing block wired up by hand. Finally, an
+early version of \texttt{count\_binary.c} checked \texttt{level} against its minimum/maximum
+bounds to flip the ramp direction but never actually incremented or decremented \texttt{level}
+itself, so the custom instruction was always called with \texttt{level~=~0} and no pulsing
+occurred; this was caught during testing and fixed.
+
+\section{Critical Assessment}
+
+\textbf{Part~A.} Strengths: the design cleanly separates SRAM and SDRAM testing by relocating only
+the CPU's reset/exception vector, and both memories are verified over their full advertised
+capacity. Weakness: this approach requires two separate BSP rebuilds and re-programming cycles
+rather than a single run that exercises both memories simultaneously under load.
+
+\textbf{Part~B.} Strengths: the combinational priority-encoder implementation gives constant,
+data-independent single-cycle latency and a measured $\sim\!8\times$ speed-up over software, using
+a small, well-structured circuit. Weakness: it consumes FPGA logic resources and one of a limited
+number of custom instruction opcode slots, and -- unlike the software routine -- is tied to this
+specific Nios~II system rather than being portable to another target without hardware changes.
+
+\textbf{Part~C.} Strengths: splitting the design into a reusable, general-purpose \texttt{pwm}
+Avalon-MM peripheral and a separate \texttt{ci\_pwm\_controller} custom instruction keeps the duty
+generation logic reusable while giving application code a simple 0--9 brightness scale instead of
+raw duty values. Weaknesses: the level-to-duty mapping in Table~\ref{tab:level-duty} is linear,
+whereas human brightness perception is closer to logarithmic, so the perceived brightness steps are
+uneven (they appear to change faster at the low end than the high end); and levels 9 and 10 both
+saturate to the same maximum duty value, making them visually indistinguishable.
+
+\section{How the System Was Fully Tested}
+
+Part~A was tested using the Nios~II IDE's Memory Test utility in both directions, exercising the
+complete 512~KB SRAM and 8~MB SDRAM address ranges (Table~\ref{tab:mem-regions}) and all of its
+built-in sub-tests. Part~B was tested with a 100{,}000-iteration timed benchmark that ran the
+identical pseudo-varied input pattern through both the software routine and the hardware custom
+instruction, so their results and timings could be compared directly on equal terms
+(Table~\ref{tab:sw-vs-hw}). Part~C was tested by observing the physical LEDR10 output on the DE2
+board over multiple full breathing cycles, recorded in the linked demonstration video, confirming
+the LED reaches both its off and fully-on extremes and transitions smoothly between them as
+required.
 
 \bibliographystyle{plain}
 \bibliography{bibliography}

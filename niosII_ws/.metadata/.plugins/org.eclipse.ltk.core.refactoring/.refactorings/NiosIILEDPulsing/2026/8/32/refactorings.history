@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;NiosIILEDPulsing/count_binary.c&apos; to &apos;led_pulsing.c&apos;" description="Rename resource &apos;count_binary.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="count_binary.c" name="led_pulsing.c" stamp="1785892537684" updateReferences="true"/>
+</session>
